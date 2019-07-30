@@ -12,21 +12,35 @@ export default new Vuex.Store({
 
   },
   actions: {
-    loadDemons({commit}) {
-     axios
-     .get('http://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=List%20of%20theological%20demons&origin=*')
-     .then(data => {
-       console.log(data)
-     })
-     .catch(error => console.log(error))
-    },
-    loadAngels({commit}) {
-      axios
-      .get('http://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=List%20of%20theological%20demons&origin=*')
-      .then(data => {
-        console.log(data)
+    loadInfo({commit}) {
+      axios({ 
+        method: "get",
+        url: 'http://en.wikipedia.org/w/api.php',
+        params: {
+          action: 'query',
+          titles: 'Anzû',
+          format: 'json',
+          prop: 'images|cirrusbuilddoc',
+          origin: '*'
+       },
+       
+        
+      }).then(response => {
+        let page = response.data.query.pages
+         let id = Object.keys(page);
+        let doc = page[id].cirrusbuilddoc
+         let openingText = doc.opening_text
+
+
+        
+        console.log(openingText)
+       
+       
+        
       })
-      .catch(error => console.log(error))
-     }
+      .catch = error => console.log(error);
+  
+
+    }
   }
 })

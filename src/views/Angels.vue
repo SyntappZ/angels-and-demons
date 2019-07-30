@@ -42,9 +42,7 @@
 
 <script>
 export default {
-  mounted() {
-    //this.$store.dispatch('loadAngels')
-  },
+ 
   data() {
     return {
 

@@ -14,6 +14,7 @@ export default {
   components: {
     Nav
   },
+
     
   
   
@@ -29,7 +30,7 @@ export default {
 
 <style>
 html {
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 body {

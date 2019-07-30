@@ -44,7 +44,11 @@
 
 <script>
 export default {
-  mounted() {},
+  mounted() {
+       
+    this.$store.dispatch('loadInfo')
+  
+  },
   data() {
     return {};
   },
