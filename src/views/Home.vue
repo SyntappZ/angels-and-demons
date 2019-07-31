@@ -1,19 +1,18 @@
 <template>
   <div class="home-wrap">
-    <div class="welcome">
-      <h1 class="cookie">Welcome</h1>
-      <h1 class="cookie">to</h1>
-      <h1 class="cookie">Angels & Demons</h1>
-    </div>
-   
+  <midPage />
+  
   </div>
+  
 </template>
 
 <script>
-import PageFooter from "@/components/PageFooter";
+
+import midPage from '@/components/MiddlePage'
 export default {
   components: {
-    PageFooter
+   
+    midPage
   },
   data() {
     return {
@@ -28,22 +27,14 @@ export default {
 
 <style scoped>
 .home-wrap {
-  width: 100%;
-  height: 80vh;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 150px;
+ 
 }
 .welcome {
   text-align: center;
 }
 
 @media (max-width: 900px) {
-  .home-wrap {
-    display: none;
-  }
+ 
 }
 </style>
 

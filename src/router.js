@@ -24,6 +24,12 @@ export default new Router({
       name: 'demons',
      
       component: () => import('./views/Demons.vue')
+    },
+    {
+      path: '/information',
+      name: 'information',
+     
+      component: () => import('./views/Information.vue')
     }
   ]
 })
