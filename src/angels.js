@@ -1,6 +1,6 @@
-let angels = [
+export default [
   {
-    angel: "Abaddon, also known in Greek as Apollyon",
+    angel: "Abaddon/Apollyon",
     religion: "Christianity, Judaism",
     type: "None",
     domain: "Destruction"
@@ -22,12 +22,6 @@ let angels = [
     religion: "Jewish mythology",
     type: "None",
     domain: "Waters of the Earth"
-  },
-  {
-    angel: "Archangel (type)",
-    religion: "Christianity, Islam, Judaism",
-    type: "(type)",
-    domain: "None"
   },
   {
     angel: "Ariel (angel)",
@@ -67,12 +61,6 @@ let angels = [
     domain: "None"
   },
   {
-    angel: "Bene Elohim (type)",
-    religion: "Christianity, Judaism",
-    type: '"Sons of God" (type)',
-    domain: "None"
-  },
-  {
     angel: "Camael, a.k.a. Kemuel or Kamael or Khamael",
     religion: "Christianity, Judaism",
     type: "Archangel, leader of the Powers, one of the Dominions",
@@ -83,12 +71,6 @@ let angels = [
     religion: "Christianity, Islam, Judaism",
     type: "Archangel",
     domain: "Solitude and Tears"
-  },
-  {
-    angel: "Cherub/Cherubim (type)",
-    religion: "Christianity, Judaism, Islam",
-    type: "(type)",
-    domain: "None"
   },
   {
     angel: "Cherubiel/Kerubiel",
@@ -106,12 +88,6 @@ let angels = [
     angel: "Dadrail",
     religion: "Islam,[1] Yazdânism",
     type: "Archangel (in Yazdanism)",
-    domain: "None"
-  },
-  {
-    angel: "Dominions a.k.a. Kyriotetes (type)",
-    religion: "Christianity, Judaism",
-    type: "(type)",
     domain: "None"
   },
   {
@@ -139,12 +115,6 @@ let angels = [
     angel: "Gadreel",
     religion: "Christianity, Judaism",
     type: "None",
-    domain: "None"
-  },
-  {
-    angel: "Grigori a.k.a. Watchers (type)",
-    religion: "Christianity, Judaism",
-    type: "(type)",
     domain: "None"
   },
   {
@@ -190,12 +160,6 @@ let angels = [
     angel: "Imamiah",
     religion: "Christianity, Judaism]",
     type: "Principality",
-    domain: "None"
-  },
-  {
-    angel: "Ishim (type)",
-    religion: "Judaism, Islam",
-    type: "(type)",
     domain: "None"
   },
   {
@@ -310,12 +274,6 @@ let angels = [
     domain: "The Golden Plates"
   },
   {
-    angel: "Mu’aqqibat (type)",
-    religion: "Islam",
-    type: "(type)",
-    domain: "None"
-  },
-  {
     angel: "Munkar",
     religion: "Islam",
     type: "None",
@@ -382,12 +340,6 @@ let angels = [
     domain: "Repentance and hope"
   },
   {
-    angel: "Powers (type)",
-    religion: "Christianity, Judaism",
-    type: "(type)",
-    domain: "None"
-  },
-  {
     angel: "Poyel",
     religion: "Christianity, Judaism",
     type: "Principality",
@@ -398,12 +350,6 @@ let angels = [
     religion: "Jewish mythology",
     type: "Archangel",
     domain: "God's scribe and record-keeper"
-  },
-  {
-    angel: "Principalities (type)",
-    religion: "Christianity, Judaism",
-    type: "(type)",
-    domain: "None"
   },
   {
     angel: "Puriel",
@@ -541,12 +487,6 @@ let angels = [
     domain: "None"
   },
   {
-    angel: "Song-Uttering Choirs (type)",
-    religion: "Judaism",
-    type: "(type)",
-    domain: "None"
-  },
-  {
     angel: "Temeluchus",
     religion: "Christianity, Judaism",
     type: "None",
@@ -556,12 +496,6 @@ let angels = [
     angel: "Tennin",
     religion: "Japanese mythology",
     type: "None",
-    domain: "None"
-  },
-  {
-    angel: "Thrones (type)",
-    religion: "Christianity, Judaism",
-    type: "(type)",
     domain: "None"
   },
   { angel: "Turail", religion: "Yazdânism", type: "Archangel", domain: "None" },
@@ -582,12 +516,6 @@ let angels = [
     angel: "Vehuel",
     religion: "Christianity, Judaism",
     type: "Principality",
-    domain: "None"
-  },
-  {
-    angel: "Virtues (type)",
-    religion: "Christianity, Judaism",
-    type: "(type)",
     domain: "None"
   },
   { angel: "Wormwood", religion: "Christianity", type: "None", domain: "war" },

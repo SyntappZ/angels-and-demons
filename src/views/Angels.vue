@@ -1,62 +1,62 @@
 <template>
-    <v-container grid-list-md text-center>
-    <v-layout wrap>
-      <v-flex xs12>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">
-
-            <h1>title</h1>
-          </v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs12 sm6 md6 lg6>
-        <v-card dark color="secondary">
-          <v-card-text class="px-0">6</v-card-text>
-        </v-card>
-      </v-flex>
-       <v-flex xs12 sm6 md6 lg6>
-        <v-card dark color="secondary">
-          <v-card-text class="px-0">6</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs12 md4 lg4>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">4</v-card-text>
-        </v-card>
-      </v-flex>
-       <v-flex xs12 md4 lg4>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">4</v-card-text>
-        </v-card>
-      </v-flex>
-       <v-flex xs12 md4 lg4>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">4</v-card-text>
-        </v-card>
-      </v-flex>
-      
-     
-    </v-layout>
-  </v-container>
+<div class="angels">
+   <pageDetails
+    :list="getList"
+     title="Angels"
+     :images="angelImages"
+     />
+  
+</div>
+ 
 </template>
 
 <script>
+import pageDetails from '../components/PageDetails'
+import angelsList from '../angels.js'
 export default {
+  
+  components: {
+    pageDetails  
+  },
+  created() {
+   angelsList.forEach(x => {
+     this.angels.push({
+       title: x.angel,
+       religion: x.religion
+     })
+   })
+   
+  },
  
   data() {
     return {
-
+      angels: [],
+      
+      angelImages: [
+        {img: 'fallenAngel.jpg'},
+        {img: 'angel3.jpg'},
+        {img: 'angel4.jpg'}
+      ]
+  
+      
     }
   },
   methods: {
 
   },
   computed: {
+    getList() {
+      return this.angels
+    },
+   
 
   }
 }
 </script>
 
 <style scoped>
-
+.angels {
+ background-color: rgb(240, 240, 240);
+ border-top:solid 3px #333;
+}
 </style>

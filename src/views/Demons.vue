@@ -1,61 +1,56 @@
 <template>
-  <div>
-    <v-container grid-list-md text-center>
-    <v-layout wrap>
-      <v-flex xs12>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">
-
-            <h1>title</h1>
-          </v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs12 md6 lg6>
-        <v-card dark color="secondary">
-          <v-card-text class="px-0">6</v-card-text>
-        </v-card>
-      </v-flex>
-       <v-flex xs12 md6 lg6>
-        <v-card dark color="secondary">
-          <v-card-text class="px-0">6</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs12 md4 lg4>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">4</v-card-text>
-        </v-card>
-      </v-flex>
-       <v-flex xs12 md4 lg4>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">4</v-card-text>
-        </v-card>
-      </v-flex>
-       <v-flex xs12 md4 lg4>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">4</v-card-text>
-        </v-card>
-      </v-flex>
-      
-     
-    </v-layout>
-  </v-container>
+  <div class="demons">
+    <pageDetails 
+    :list="getList"
+     title="Demons"
+     :images="demonImages"
+     />
   </div>
 </template>
 
 <script>
+import pageDetails from "../components/PageDetails";
+import demonsList from '../demons.js'
 export default {
+  components: {
+    pageDetails
+  },
   mounted() {
-       
-    this.$store.dispatch('loadInfo')
+    // this.$store.dispatch('loadInfo');
+    demonsList.forEach(x => {
+     this.demons.push({
+       title: x.demon,
+       religion: x.religion
+     })
+   })
   
   },
   data() {
-    return {};
+    return {
+      demons: [],
+       demonImages: [
+        {img: 'blackeyes.jpg'},
+        {img: 'demon2.jpg'},
+        {img: 'demon3.jpg'},
+        {img: 'demon4.jpg'},
+        {img: 'demon5.jpg'},
+         {img: 'demon6.jpg'},
+        {img: 'demon7.jpg'}
+      ]
+    };
   },
   methods: {},
-  computed: {}
+  computed: {
+      getList() {
+      return this.demons
+    }
+  }
 };
 </script>
 
 <style scoped>
+.demons {
+  background-color: rgb(240, 240, 240);
+   border-top:solid 3px #333;
+}
 </style>

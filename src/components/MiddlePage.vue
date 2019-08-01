@@ -1,25 +1,9 @@
 <template>
   <div class="midPage">
-    <div class="background">
-      <img class="bg-img" src="demon.jpg" alt />
-      <div class="welcome-wrap">
-        <div class="welcome">
-          <h4 class="skewed">Welcome To Angels & Demons</h4>
-        </div>
-
-        <h5>
-          Information on many types of demons,
-          <br />or angels if thats how you are.
-        </h5>
-       <a href=""> <button class="btn">
-          more info
-          <i class="fas fa-arrow-right"></i>
-        </button></a>
-      </div>
-    </div>
+    <topImg bgImg="demon.jpg" theSkew="Welcome To Angels & Demons" />
 
     <v-container grid-list-md text-center>
-      <v-layout wrap>
+      <v-layout wrap class="layout-wrap">
         <v-flex xs12>
           <div class="title">
             <h4>demons & angels</h4>
@@ -47,7 +31,11 @@
 </template>
 
 <script>
+import topImg from "./TopImg";
 export default {
+  components: {
+    topImg
+  },
   data() {
     return {
       images: [
@@ -95,7 +83,8 @@ export default {
         }
       ]
     };
-  }
+  },
+  computed: {}
 };
 </script>
 
@@ -106,48 +95,11 @@ export default {
   margin: auto;
 }
 
-.background {
-  width: 100%;
-  position: relative;
-}
-.bg-img {
-  width: 100%;
-  object-fit: cover;
-  object-position: 0 0;
-  height: 70vh;
-}
-.welcome-wrap {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 100px;
-  margin: auto;
-  width: 50%;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-.welcome {
-  width: 580px;
-  height: 60px;
-  line-height: 60px;
-  background-color: rgb(255, 255, 255);
-  transform: skew(20deg);
-}
-.skewed {
-  font-family: Arial, Helvetica, sans-serif;
-  transform: skew(-20deg);
-  font-size: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 .title {
   height: 60px;
   line-height: 60px;
-  border-bottom: solid 3px #000;
-  margin: 30px auto;
+
+  margin: 30x auto;
 }
 .title h4 {
   font-family: Arial, Helvetica, sans-serif;
@@ -157,19 +109,17 @@ export default {
   text-transform: uppercase;
   color: #000;
 }
-h5 {
-  color: white;
-  font-size: 19px;
-  line-height: 25px;
-  letter-spacing: 2px;
-}
-.btn {
-  color: white;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
-  border: solid 1px white;
-  padding: 15px 20px;
+
+.title h4:before,
+.title h4:after {
+  background-color: rgb(0, 0, 0);
+  content: "";
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 20%;
+  margin: 0 10px;
 }
 
 .img-title {
@@ -216,16 +166,7 @@ a:hover {
   .midPage {
     width: 100%;
   }
-  .bg-img {
-    object-position: 100% 0;
-  }
-  .welcome-wrap {
-    width: 100%;
-    left: 0;
-  }
-  .welcome {
-    background-color: rgba(255, 255, 255, 0.712);
-  }
+
   .img-wrap {
     width: 500px;
     height: 450px;
@@ -235,21 +176,34 @@ a:hover {
   }
 }
 @media (max-width: 600px) {
-  .welcome {
-    width: 80%;
-  }
-  .skewed {
-    font-size: 16px;
-  }
-  h5 {
-    font-size: 14px;
-  }
   .img-wrap {
     width: 90%;
     height: 260px;
   }
+  .img-title-wrap {
+    margin: 20px auto;
+  }
   .img-wrap img {
     height: 254px;
   }
+  .title h4 {
+    font-size: 18px;
+  }
+  .title h4:before,
+  .title h4:after {
+    width: 0;
+  }
+  .title {
+    margin: auto;
+    border-bottom:solid;
+    width:80%;
+  }
+  a {
+ border:solid 2px #333;
+ width:80%;
+  padding: 15px 0;
+  margin: 5px 0;
+  transition: 0.3s;
+}
 }
 </style>

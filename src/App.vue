@@ -3,7 +3,10 @@
     
 
     <Nav />
-    <router-view />
+    
+      <router-view />
+    
+    
     <pageFooter />
   </div>
 </template>
@@ -47,6 +50,7 @@ body {
   
  
 }
+
 
 .cookie {
   font-family: 'Cookie', cursive;

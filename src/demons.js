@@ -1,4 +1,4 @@
-let demons = [
+export default [
   { demon: "Aamon/Amon", religion: "Christian demonology" },
   { demon: "Abaddon/Apollyon", religion: "Christian demonology" },
   { demon: "Abezethibou", religion: "Jewish demonology" },
@@ -116,7 +116,7 @@ let demons = [
   { demon: "Ghoul", religion: "Arabian and several other mythologies" },
   {
     demon:
-      "Glasya-Labolas/Caacrinolaas/Caassimolar/Classyalabolas/Glassia-labolis",
+      "Glasya-Labolas/Caacrinolaas",
     religion: "Christian demonology"
   },
   { demon: "Gorgon", religion: "Greek mythology" },

@@ -1,8 +1,8 @@
 <template>
-  <div class="home-wrap">
+  
   <midPage />
   
-  </div>
+  
   
 </template>
 
@@ -26,9 +26,7 @@ export default {
 </script>
 
 <style scoped>
-.home-wrap {
- 
-}
+
 .welcome {
   text-align: center;
 }
