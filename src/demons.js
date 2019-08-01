@@ -100,7 +100,7 @@ export default [
   { demon: "Djall", religion: "Albanian mythology" },
   { demon: "Drekavac", religion: "Slavic mythology" },
   { demon: "Dzoavits", religion: "Native American mythology" },
-  { demon: "Eblis", religion: "or Iblis) (Islamic demonology" },
+  { demon: "Eblis", religion: " Islamic demonology" },
   { demon: "Eligos", religion: "Christian demonology" },
   { demon: "Eisheth", religion: "Jewish demonology" },
   { demon: "Erlik", religion: "Turkish mythology" },
@@ -113,7 +113,7 @@ export default [
   { demon: "Gader'el", religion: "Jewish demonology" },
   { demon: "Gaki", religion: "Japanese mythology" },
   { demon: "Gamigin", religion: "Christian demonology" },
-  { demon: "Ghoul", religion: "Arabian and several other mythologies" },
+  { demon: "Ghoul", religion: "Arabian" },
   {
     demon:
       "Glasya-Labolas/Caacrinolaas",
@@ -143,7 +143,7 @@ export default [
   { demon: "Kokabiel", religion: "Jewish mythology" },
   { demon: "Kroni", religion: "Ayyavazhi demonology" },
   { demon: "Krampus", religion: "Germanic-Christian demonology" },
-  { demon: "Killakee", religion: "Hell Fire Club" },
+  { demon: "Killakee", religion: "Hell-Fire-Club" },
   { demon: "Kukudh", religion: "Albanian mythology" },
   { demon: "Kumbhakarna", religion: "Hindu mythology" },
   { demon: "Legion", religion: "Christian demonology" },
@@ -209,7 +209,7 @@ export default [
   { demon: "Salpsan", religion: "Christian demonology" },
   {
     demon: "Satan",
-    religion: "or Al-Shaytan) (Jewish, Christian, and Islamic theology"
+    religion: "Jewish, Christian, and Islamic theology"
   },
   { demon: "Set", religion: "Egyptian mythology" },
   { demon: "Seir", religion: "Christian demonology" },

@@ -43,7 +43,7 @@ export default {
   props: ["list", "title", "images"],
 
   created() {
-    console.log(this.images);
+    
   },
 
   data() {
@@ -77,13 +77,15 @@ export default {
 }
 .link:hover {
   transform: scale(1.1);
+  text-shadow: 0 0 1px #333;
+  
 }
 
 .main-img {
   width: 90%;
   position: relative;
-
-  margin: 250px auto;
+   margin: 70px auto;  
+ 
 }
 .main-img img {
   width: 100%;
@@ -123,10 +125,7 @@ export default {
    
 }
 @media (min-width: 1500px) {
-   .main-img {
   
 
-  margin: 70px auto;
-}
 }
 </style>

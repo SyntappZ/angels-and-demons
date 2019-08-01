@@ -86,7 +86,7 @@ export default [
   },
   {
     angel: "Dadrail",
-    religion: "Islam,[1] Yazdânism",
+    religion: "Islam, Yazdânism",
     type: "Archangel (in Yazdanism)",
     domain: "None"
   },
@@ -158,7 +158,7 @@ export default [
   { angel: "Hofniel", religion: "Judaism", type: "Archangel", domain: "None" },
   {
     angel: "Imamiah",
-    religion: "Christianity, Judaism]",
+    religion: "Christianity, Judaism",
     type: "Principality",
     domain: "None"
   },
