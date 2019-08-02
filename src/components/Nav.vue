@@ -20,6 +20,9 @@
           <v-flex xs12 md4 lg4>
             <router-link class="link" to="/demons">DEMONS</router-link>
           </v-flex>
+             <v-flex xs12 md4 lg4>
+            <router-link class="link" to="/Information">preview</router-link>
+          </v-flex>
         </v-layout>
       </v-flex>
     </v-layout>

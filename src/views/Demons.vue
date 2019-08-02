@@ -12,13 +12,20 @@ export default {
     pageDetails
   },
   created() {
-    // this.$store.dispatch('loadInfo');
-    demonsList.forEach(x => {
+    let demons = demonsList.map(x => x.demon);
+    let names = [];
+    demons.forEach(x => {
+      names.push(x.split("/")[0]);
+    });
+
+    demonsList.forEach((x, i) => {
       this.demons.push({
         title: x.demon,
-        religion: x.religion
+        religion: x.religion,
+        name: names[i]
       });
     });
+
     if (window.innerWidth > 1500) {
       this.demonImages.length = 7;
     }
@@ -30,9 +37,11 @@ export default {
           /mythology|demonology|eschatology|folklore|&|and|of|theology|or|None|,/gi,
           ""
         )
-      ).join(' ').split(' ').filter(x => x != '')
-    
-   
+      )
+      .join(" ")
+      .split(" ")
+      .filter(x => x != "");
+
     let types = [...new Set(religions)];
 
     for (let i = 0; i < types.length; i++) {
@@ -41,7 +50,6 @@ export default {
         amount: religions.filter(x => x == types[i]).length
       });
     }
-    
   },
   data() {
     return {

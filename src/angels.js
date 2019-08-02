@@ -73,7 +73,7 @@ export default [
     domain: "Solitude and Tears"
   },
   {
-    angel: "Cherubiel/Kerubiel",
+    angel: "Kerubiel a.k.a Cherubiel",
     religion: "Christianity, Judaism, Islam",
     type: "cherub",
     domain: "None"
@@ -82,12 +82,6 @@ export default [
     angel: "Daniel",
     religion: "Christianity, Judaism",
     type: "Watcher",
-    domain: "None"
-  },
-  {
-    angel: "Dadrail",
-    religion: "Islam, Yazdânism",
-    type: "Archangel (in Yazdanism)",
     domain: "None"
   },
   {
@@ -124,12 +118,6 @@ export default [
     domain: "Second Heavenly Gate"
   },
   {
-    angel: "Hahasiah",
-    religion: "Christianity, Judaism",
-    type: "Principality",
-    domain: "None"
-  },
-  {
     angel: "Haniel",
     religion: "Christianity, Judaism",
     type:
@@ -143,25 +131,19 @@ export default [
     domain: "Sorcery"
   },
   {
-    angel: "Hashmal[2]",
+    angel: "Hashmal",
     religion: "Christianity, Judaism",
     type: "Dominions",
     domain: "None"
   },
   { angel: "Hamalat al-Arsh", religion: "Islam", type: "None", domain: "None" },
   {
-    angel: "Hesediel see also Zadkiel",
+    angel: "Hesediel",
     religion: "Christianity, Judaism",
     type: "None",
     domain: "Freedom, benevolence and mercy"
   },
-  { angel: "Hofniel", religion: "Judaism", type: "Archangel", domain: "None" },
-  {
-    angel: "Imamiah",
-    religion: "Christianity, Judaism",
-    type: "Principality",
-    domain: "None"
-  },
+ 
   {
     angel: "Israfil, also spelled Israfel, often considered same as Raphael",
     religion: "Islam",
@@ -175,13 +157,13 @@ export default [
     domain: "Responsibility and merciful love"
   },
   {
-    angel: "Jehoel[3]",
+    angel: "Jehoel",
     religion: "Christianity, Judaism",
     type: "Seraph/Seraphim",
     domain: "Fire"
   },
   {
-    angel: "Jequn[4]",
+    angel: "Jequn",
     religion: "Christianity, Judaism",
     type: "None",
     domain: "None"
@@ -203,12 +185,6 @@ export default [
     religion: "Islam",
     type: "None",
     domain: "Fifth heaven"
-  },
-  {
-    angel: "Kepharel",
-    religion: "Jewish mythology",
-    type: "Archangel",
-    domain: "None"
   },
   { angel: "Kerubiel", religion: "Judaism", type: "None", domain: "None" },
   {
@@ -243,19 +219,13 @@ export default [
     domain: "Sorcery"
   },
   {
-    angel: "Mebahiah",
-    religion: "Christianity, Judaism",
-    type: "Principality",
-    domain: "None"
-  },
-  {
     angel: "Melek Taus",
     religion: "Yazdânism",
     type: "Archangel",
     domain: "(Title)"
   },
   {
-    angel: "Metatron[5]",
+    angel: "Metatron",
     religion: "Judaism, Christianity, Islam",
     type: "Archangel, one of the seraph",
     domain: "The Celestial Scribe"
@@ -292,12 +262,6 @@ export default [
     domain: "The Faith of the Dead"
   },
   {
-    angel: "Nanael",
-    religion: "Christianity, Judaism",
-    type: "Principality",
-    domain: "None"
-  },
-  {
     angel: "Netzach",
     religion: "Christianity, Judaism",
     type: "Leader of the Principalities along with Archangel Haniel",
@@ -315,12 +279,7 @@ export default [
     type: "None",
     domain: "Hailstorms"
   },
-  {
-    angel: "Ophaniel (Ofaniel, etc.)",
-    religion: "Christianity, Judaism",
-    type: "Cherubim; sometimes listed as one of the Thrones",
-    domain: "None"
-  },
+ 
   {
     angel: "Pahaliah",
     religion: "Christianity",
@@ -363,12 +322,7 @@ export default [
     type: "None",
     domain: "Angel of tears, temperance. Presides over the deaths of kings."
   },
-  {
-    angel: "Radueriel",
-    religion: "Jewish mythology",
-    type: "None",
-    domain: "Can create lesser angels with a mere utterance"
-  },
+ 
   {
     angel: "Raguel, also known in Arabic texts as Azrael",
     religion: "Christianity, Judaism, Islam",
@@ -394,12 +348,7 @@ export default [
     type: "Archangel",
     domain: "None"
   },
-  {
-    angel: "Rikbiel",
-    religion: "Christianity, Judaism",
-    type: "Cherubim",
-    domain: "None"
-  },
+ 
   {
     angel: "Sachiel",
     religion: "Christianity, Judaism",
@@ -412,12 +361,7 @@ export default [
     type: "Archangel",
     domain: "Guardian of the fourth heaven"
   },
-  {
-    angel: "Sabriel",
-    religion: "Jewish mythology",
-    type: "Archangel",
-    domain: "Miracles"
-  },
+  
   {
     angel: "Samael",
     religion: "Christianity, Judaism",
@@ -456,14 +400,9 @@ export default [
     type: "Archangel",
     domain: "Patron saint of prayer and worship"
   },
+ 
   {
-    angel: "Seraph/Seraphim (type)",
-    religion: "Christianity, Judaism",
-    type: "(type)",
-    domain: "None"
-  },
-  {
-    angel: "Seraphiel[8]",
+    angel: "Seraphiel",
     religion: "Christianity, Judaism",
     type: "seraph",
     domain: "Protector of Metatron, highest ranking saraphim"
@@ -480,12 +419,7 @@ export default [
     type: "None",
     domain: "None"
   },
-  {
-    angel: "Sidriel",
-    religion: "Jewish mythology",
-    type: "Archangel",
-    domain: "None"
-  },
+ 
   {
     angel: "Temeluchus",
     religion: "Christianity, Judaism",
@@ -498,7 +432,7 @@ export default [
     type: "None",
     domain: "None"
   },
-  { angel: "Turail", religion: "Yazdânism", type: "Archangel", domain: "None" },
+ 
   {
     angel: "Uriel",
     religion: "Christianity, Judaism",
@@ -506,12 +440,7 @@ export default [
     domain: '"El/God is my light"; patron of the Arts'
   },
   { angel: "Uziel", religion: "Judaism", type: "Archangel", domain: "None" },
-  {
-    angel: "Vasiariah[10]",
-    religion: "Christianity, Judaism",
-    type: "Dominions",
-    domain: "None"
-  },
+  
   {
     angel: "Vehuel",
     religion: "Christianity, Judaism",
@@ -520,13 +449,13 @@ export default [
   },
   { angel: "Wormwood", religion: "Christianity", type: "None", domain: "war" },
   {
-    angel: "Zachariel[11]",
+    angel: "Zachariel",
     religion: "Christianity",
     type: "Archangel",
     domain: "None"
   },
   {
-    angel: "Zadkiel a.k.a. Tzadkiel[11]",
+    angel: "Zadkiel a.k.a. Tzadkiel",
     religion: "Christianity, Judaism",
     type: "Archangel, leader of the Dominions",
     domain:

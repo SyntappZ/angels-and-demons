@@ -6,7 +6,7 @@
         <v-flex class="list-wrap" xs12 md6 lg6>
           <h2 class="title">{{ title }}</h2>
           <div v-for="(item, i) in list" :key="i">
-            <h4 class="link">
+            <h4 class="link" @click="getInfo(item.name)">
               {{item.title}}
               <span class="hyphen">-</span>
               <span class="religion">{{ item.religion }}</span>
@@ -42,6 +42,12 @@ export default {
       labels: [],
       value: []
     };
+  },
+  methods: {
+    getInfo(name) {
+      this.$store.dispatch('loadInfo', name);
+       //this.$router.push("/Information");
+    }
   }
 };
 </script>

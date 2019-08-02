@@ -13,15 +13,47 @@ export default new Vuex.Store({
 
   },
   actions: {
-    loadInfo({commit}) {
-      axios({ 
+    loadInfo({commit}, name) {
+    //   axios({ 
+    //     method: "get",
+    //     url: 'http://en.wikipedia.org/w/api.php',
+    //     params: {
+    //       action: 'query',
+    //       titles: name,
+    //       format: 'json',
+    //       prop: 'images|pageterms',
+    //       origin: '*'
+    //    },
+       
+        
+    //   }).then(response => {
+    //     let page = response.data.query.pages
+    //      let id = Object.keys(page);
+    //     let doc = page[id]
+
+
+    //     let images = page[id].images
+    //      let openingText = doc.opening_text
+    //    let text = doc.text
+    //    let source = doc.source_text.replace(/[\[\]{}]/g, '')
+     
+    //  let arr = source.split('==')
+         
+    //    console.log(doc)
+       
+       
+        
+    //   })
+    //   .catch = error => console.log(error);
+  
+          axios({ 
         method: "get",
         url: 'http://en.wikipedia.org/w/api.php',
         params: {
           action: 'query',
-          titles: 'Anzû',
+          titles: name,
           format: 'json',
-          prop: 'images|cirrusbuilddoc',
+          prop: 'extracts',
           origin: '*'
        },
        
@@ -29,19 +61,22 @@ export default new Vuex.Store({
       }).then(response => {
         let page = response.data.query.pages
          let id = Object.keys(page);
-        let doc = page[id].cirrusbuilddoc
-         let openingText = doc.opening_text
+        let doc = page[id].extract
 
 
-        
-        console.log(openingText)
+    //     let images = page[id].images
+    //      let openingText = doc.opening_text
+    //    let text = doc.text
+    //    let source = doc.source_text.replace(/[\[\]{}]/g, '')
+     
+    //  let arr = source.split('==')
+       let arr =  doc.split('<p>')
+       arr.forEach(x => console.log(x))
        
        
         
       })
       .catch = error => console.log(error);
-  
-
     }
   }
 })

@@ -12,10 +12,18 @@ export default {
     pageDetails
   },
   created() {
-    angelsList.forEach(x => {
+    let angels = angelsList.map(x => x.angel.replace(/,|\//, " "));
+    let names = [];
+
+    angels.forEach(x => {
+      names.push(x.split(" ")[0]);
+    });
+
+    angelsList.forEach((x, i) => {
       this.angels.push({
         title: x.angel,
-        religion: x.religion
+        religion: x.religion,
+        name: names[i]
       });
     });
     if (window.innerWidth > 1500) {
