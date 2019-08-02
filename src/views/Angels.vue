@@ -1,6 +1,6 @@
 <template>
   <div class="angels">
-    <pageDetails :list="getList" title="Angels" :images="angelImages" />
+    <pageDetails :list="getList" title="Angels" :images="angelImages" :religion="religion" />
   </div>
 </template>
 

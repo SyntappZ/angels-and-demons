@@ -1,6 +1,6 @@
 <template>
   <div class="demons">
-    <pageDetails :list="getList" title="Demons" :images="demonImages" />
+    <pageDetails :list="getList" title="Demons" :images="demonImages" :religion="religion" />
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   components: {
     pageDetails
   },
-  mounted() {
+  created() {
     // this.$store.dispatch('loadInfo');
     demonsList.forEach(x => {
       this.demons.push({
@@ -41,8 +41,7 @@ export default {
         amount: religions.filter(x => x == types[i]).length
       });
     }
-    console.log(types)
-    console.log(this.religion);
+    
   },
   data() {
     return {
