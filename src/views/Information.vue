@@ -1,6 +1,6 @@
 <template>
     <div class="info">
-         <v-container grid-list-md text-center>
+         <!-- <v-container grid-list-md text-center>
     <v-layout wrap>
       <v-flex xs12>
        <h3>title</h3>
@@ -32,16 +32,31 @@
         </v-card>
       </v-flex>
     </v-layout>
-  </v-container>
+  </v-container> -->
     </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
+import { setTimeout } from 'timers';
 export default {
+  mounted() {
+    setTimeout(() => {
+       
+    
+    
+    }, 300)
+   
+   
+  
+  },
     data() {
         return {
             
         }
+    },
+    computed: {
+      ...mapState(['html'])
     }
 }
 </script>

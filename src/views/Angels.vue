@@ -14,18 +14,20 @@ export default {
   created() {
     let angels = angelsList.map(x => x.angel.replace(/,|\//, " "));
     let names = [];
-
+  
     angels.forEach(x => {
-      names.push(x.split(" ")[0]);
+      x == 'Harut' || x == 'Marut' ? names.push('Harut and Marut') : names.push(x.split(" ")[0]);
     });
-
+ 
     angelsList.forEach((x, i) => {
       this.angels.push({
-        title: x.angel,
+        title: x.angel.replace(/-/g, ' '),
         religion: x.religion,
-        name: names[i]
+        name: names[i].replace(/-/g, ' ')
       });
     });
+//console.log(this.angels)
+    
     if (window.innerWidth > 1500) {
       this.angelImages.pop();
     }

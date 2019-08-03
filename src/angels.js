@@ -6,13 +6,13 @@ export default [
     domain: "Destruction"
   },
   {
-    angel: "Abathar Muzania",
+    angel: "Abathar-Muzania",
     religion: "Mandaeism",
     type: "None",
     domain: "The weighing of souls"
   },
   {
-    angel: "Anael, see Haniel",
+    angel: "Haniel",
     religion: "Judaism",
     type: "None",
     domain: "Joy and Pleasure"
@@ -24,7 +24,7 @@ export default [
     domain: "Waters of the Earth"
   },
   {
-    angel: "Ariel (angel)",
+    angel: "Ariel-(angel)",
     religion: "Christianity, Judaism",
     type: "None",
     domain: "Personification of Israel[citation needed]"
@@ -79,7 +79,7 @@ export default [
     domain: "None"
   },
   {
-    angel: "Daniel",
+    angel: "Daniel-(angel)",
     religion: "Christianity, Judaism",
     type: "Watcher",
     domain: "None"
@@ -92,12 +92,6 @@ export default [
       "Silence, vindication and the stillness of death, tormenting the wicked after death"
   },
   { angel: "Eleleth", religion: "Sethianism", type: "None", domain: "None" },
-  {
-    angel: "Eremiel/Jerahmeel",
-    religion: "Christianity, Judaism",
-    type: "None",
-    domain: "Watches/Guides the holy deceased in the afterlife"
-  },
   {
     angel: "Gabriel, also known in Arabic texts as Jibra'il",
     religion: "Christianity, Judaism, Islam, Mormonism, Yazdânism",
@@ -163,13 +157,7 @@ export default [
     domain: "Fire"
   },
   {
-    angel: "Jequn",
-    religion: "Christianity, Judaism",
-    type: "None",
-    domain: "None"
-  },
-  {
-    angel: "Jerahmeel",
+    angel: "Jerahmeel-(archangel)",
     religion: "Christianity, Judaism",
     type: "Archangel",
     domain: "None"
@@ -447,7 +435,7 @@ export default [
     type: "Principality",
     domain: "None"
   },
-  { angel: "Wormwood", religion: "Christianity", type: "None", domain: "war" },
+  { angel: "Wormwood-(Bible)", religion: "Christianity", type: "None", domain: "war" },
   {
     angel: "Zachariel",
     religion: "Christianity",
