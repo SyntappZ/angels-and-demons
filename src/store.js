@@ -59,9 +59,30 @@ export default new Vuex.Store({
        
         
       }).then(response => {
+
+        let contentTitles = []
+        let paragraphs = []
         let page = response.data.query.pages
          let id = Object.keys(page);
         let doc = page[id].extract
+        
+        let parser = new DOMParser
+        let parsedDoc = parser.parseFromString(doc, 'text/html')
+        let body = parsedDoc.body
+        
+        let sections = body.querySelectorAll('h2')
+        let para = body.querySelectorAll('p')
+        sections.forEach(x => contentTitles.push(x.textContent))
+        console.log(contentTitles) 
+        para.forEach(x => paragraphs.push(x.textContent))
+        console.log(paragraphs)
+
+
+
+
+
+
+
 
 
     //     let images = page[id].images
@@ -70,8 +91,7 @@ export default new Vuex.Store({
     //    let source = doc.source_text.replace(/[\[\]{}]/g, '')
      
     //  let arr = source.split('==')
-       let arr =  doc.split('<p>')
-       arr.forEach(x => console.log(x))
+      
        
        
         
