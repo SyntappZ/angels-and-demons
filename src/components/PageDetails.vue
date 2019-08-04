@@ -47,7 +47,7 @@ export default {
   methods: {
     getInfo(name) {
       this.$store.dispatch('loadInfo', name);
-      // this.$router.push("/Information");
+       this.$router.push("/Information");
     }
   }
 };

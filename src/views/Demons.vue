@@ -12,6 +12,7 @@ export default {
     pageDetails
   },
   created() {
+    
     let demons = demonsList.map(x => x.demon);
     let names = [];
     demons.forEach(x => {

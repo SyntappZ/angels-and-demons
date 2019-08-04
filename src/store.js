@@ -5,13 +5,14 @@ Vue.use(Vuex, axios);
 
 export default new Vuex.Store({
   state: {
-    angels: [],
-    demons: [],
+    info: [],
+    
     html: ""
   },
   mutations: {
     getSections(state, sections) {
       let arr = [];
+      //console.log(sections)
       sections.forEach(x => arr.push(x.textContent.replace(/\n/g, "")));
       let removeBlank = arr
         .filter(x => x.length > 0)
@@ -26,14 +27,14 @@ export default new Vuex.Store({
           removeBlank[i] = { heading: removeBlank[i] };
         }
       }
-
+//console.log(removeBlank)
       let headings = removeBlank
         .map(x => x.heading)
         .filter(x => x !== undefined);
 
       let headIndex = [];
       let sectionArray = [];
-      let start = 0
+      let start = 0;
 
       for (let i = 0; i < headings.length; i++) {
         headIndex.push(
@@ -47,19 +48,23 @@ export default new Vuex.Store({
         let section = removeBlank.slice(headIndex[i], headIndex[i + 1]);
         sectionArray.push(section);
       }
-      let welcome = sectionArray.splice(0,1)
-      let sorted = []
-     let toSort = sectionArray.filter(x => x.length > 1)
-    
-     for(let i = 0; i < toSort.length; i++) {
-       if(toSort[i].length > 2) {
-         sorted.push(...toSort[i])
+      let welcome = sectionArray.splice(0, 1);
+      let infoArray = [];
+      
+      let toSort = sectionArray.filter(x => x.length > 1);
+      welcome = welcome[0].map(x => x.paragraph).join('')
 
-// needs sortin from here===========================================
-       }
-
-       console.log(sorted)
-     }
+     toSort.forEach(x => {
+       let head = x.map(x => x.heading).filter(x => x !== undefined).join('')
+      let para = x.map(x => x.paragraph).filter(x => x !== undefined).join('')
+      infoArray.push({
+       
+        heading: head,
+        paragraph: para
+      })
+     })
+infoArray.push({welcome: welcome})
+     state.info = infoArray
     }
   },
   actions: {
