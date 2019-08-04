@@ -33,7 +33,7 @@ export default new Vuex.Store({
 
       let headIndex = [];
       let sectionArray = [];
-      let start = 0;
+      let start = 0
 
       for (let i = 0; i < headings.length; i++) {
         headIndex.push(
