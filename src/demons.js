@@ -20,7 +20,7 @@ export default [
   { demon: "Alal", religion: "Chaldean mythology" },
   { demon: "Alastor", religion: "Christian demonology" },
   { demon: "Allocer/Alloces", religion: "Christian demonology" },
-  { demon: "Allu", religion: "Akkadian mythology" },
+  { demon: "Alû", religion: "Akkadian mythology" },
   { demon: "Amaymon", religion: "Christian demonology" },
   { demon: "Amdusias", religion: "Christian demonology" },
   { demon: "Amy-(demon)", religion: "Christian demonology" },

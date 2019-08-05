@@ -85,7 +85,7 @@ export default [
     domain: "None"
   },
   {
-    angel: "Dumah",
+    angel: "Dumah-(angel)",
     religion: "Christianity, Islam, Judaism",
     type: "None",
     domain:
@@ -129,13 +129,6 @@ export default [
     religion: "Christianity, Judaism",
     type: "Dominions",
     domain: "None"
-  },
-  { angel: "Hamalat al-Arsh", religion: "Islam", type: "None", domain: "None" },
-  {
-    angel: "Hesediel",
-    religion: "Christianity, Judaism",
-    type: "None",
-    domain: "Freedom, benevolence and mercy"
   },
  
   {
@@ -207,7 +200,7 @@ export default [
     domain: "Sorcery"
   },
   {
-    angel: "Melek Taus",
+    angel: "Melek-Taus",
     religion: "Yazdânism",
     type: "Archangel",
     domain: "(Title)"
@@ -219,7 +212,7 @@ export default [
     domain: "The Celestial Scribe"
   },
   {
-    angel: "Michael, also known in Arabic texts as Mikail",
+    angel: "Michael-(archangel)",
     religion: "Christianity, Judaism, Mormonism, Islam, Yazdânism",
     type: "Archangel, one of the seraph[6]",
     domain:

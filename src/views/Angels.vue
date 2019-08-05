@@ -16,7 +16,18 @@ export default {
     let names = [];
   
     angels.forEach(x => {
-      x == 'Harut' || x == 'Marut' ? names.push('Harut and Marut') : names.push(x.split(" ")[0]);
+      
+      if(x == 'Harut' || x == 'Marut'){
+        names.push('Harut and Marut')
+      }  
+    else  if(x == 'Munkar' || x == 'Nakir') {
+        names.push('Munkar and Nakir')
+      }
+      else {
+        names.push(x.split(" ")[0]);
+      }
+      
+      
     });
  
     angelsList.forEach((x, i) => {
@@ -26,7 +37,7 @@ export default {
         name: names[i].replace(/-/g, ' ')
       });
     });
-//console.log(this.angels)
+      //console.log(this.angels)
     
     if (window.innerWidth > 1500) {
       this.angelImages.pop();
