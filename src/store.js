@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
 import { linkSync } from "fs";
+import { async } from "q";
 Vue.use(Vuex, axios);
 
 export default new Vuex.Store({
@@ -12,9 +13,9 @@ export default new Vuex.Store({
     title: ""
   },
   mutations: {
-    getSections(state, sections, name) {
+    getSections(state, sections) {
       let arr = [];
-      state.title = name;
+
       sections.forEach(x => arr.push(x.textContent.replace(/\n/g, "")));
       let removeBlank = arr
         .filter(x => x.length > 0)
@@ -57,7 +58,8 @@ export default new Vuex.Store({
       welcome = welcome[0]
         .map(x => x.paragraph)
         .join("")
-        .replace(/\.' '/g, ".\n");
+        .replace(/\. /g, ".\n")
+        
 
       toSort.forEach(x => {
         let head = x
@@ -82,11 +84,16 @@ export default new Vuex.Store({
     getLinks(state, links) {
       state.links = links;
     },
-    getImages(state, images) {}
+    getImages(state, images) {
+      state.images = images
+      
+    },
+    getName(state, name) {
+      state.title = name;
+    }
   },
   actions: {
-  loadInfo({ commit }, name) {
-      let images = [];
+    loadInfo({ commit }, name) {
       axios({
         method: "get",
         url: "http://en.wikipedia.org/w/api.php",
@@ -94,7 +101,7 @@ export default new Vuex.Store({
           action: "query",
           titles: name,
           format: "json",
-          prop: "images|extlinks",
+          prop: "images|extlinks|References",
           origin: "*"
         }
       }).then(response => {
@@ -102,12 +109,19 @@ export default new Vuex.Store({
         let id = Object.keys(page);
         let doc = page[id];
         let links = [];
-        doc.images.forEach(x => images.push(x.title.replace(/File:/g, "")));
-        doc.extlinks.forEach(x => links.push(Object.values(x).join("")));
+        if (doc.images !== undefined) {
+          let imgs = doc.images.filter(x => x.title.match(/jpg$|png$/));
+          
+          imgs.forEach(x =>
+            convertImages(x.title.replace(/File:/g, ""), imgs.length)
+          );
+        }
+        if (doc.extlinks !== undefined) {
+          doc.extlinks.forEach(x => links.push(Object.values(x).join("")));
+        }
 
-         commit("getLinks", links);
-        
-      }).catch = error => console.log(error).finally(() => {});
+        commit("getLinks", links);
+      }).catch = error => console.log(error);
 
       axios({
         method: "get",
@@ -129,30 +143,39 @@ export default new Vuex.Store({
         let body = parsedDoc.body;
 
         let sections = body.childNodes;
-        commit("getSections", sections, name);
+        commit("getSections", sections);
+        commit("getName", name);
       }).catch = error => console.log(error);
       let urls = [];
-//======================= needs fixing async await =============================
-   axios({
-        method: "get",
-        url: "https://en.wikipedia.org/w/api.php",
-        params: {
-          action: "query",
-          titles: "Image:" + "Christianandapollyon.jpg",
-          format: "json",
-          prop: "imageinfo",
-          iiprop: "url",
-          origin: "*"
-        }
-      }).then(response => {
-        let page = response.data.query.pages;
-        let id = Object.keys(page);
-        let doc = page[id];
-        let imgId = Object.keys(doc.imageinfo);
-        let url = doc.imageinfo[imgId].url;
 
-        urls.push(url);
-      }).catch = error => console.log(error);
+      function convertImages(img, len) {
+        axios({
+          method: "get",
+          url: "https://en.wikipedia.org/w/api.php",
+          params: {
+            action: "query",
+            titles: "Image:" + img,
+            format: "json",
+            prop: "imageinfo",
+            iiprop: "url",
+            origin: "*"
+          }
+        }).then(response => {
+          let page = response.data.query.pages;
+          let id = Object.keys(page);
+          let doc = page[id];
+          let imgId = Object.keys(doc.imageinfo);
+          let url = doc.imageinfo[imgId].url;
+
+          urls.push(url);
+          
+          if(urls.length == len) {
+            commit('getImages', urls)
+            
+          }
+          
+        }).catch = error => console.log(error);
+      }
     }
   }
 });

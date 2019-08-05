@@ -41,12 +41,13 @@ export default {
   data() {
     return {
       labels: [],
-      value: []
+      value: [],
+      page: ''
     };
   },
   methods: {
     getInfo(name) {
-      this.$store.dispatch('loadInfo', name);
+      this.$store.dispatch('loadInfo', name, this.page);
        this.$router.push("/Information");
     }
   }

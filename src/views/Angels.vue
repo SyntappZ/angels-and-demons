@@ -37,7 +37,7 @@ export default {
         name: names[i].replace(/-/g, ' ')
       });
     });
-      //console.log(this.angels)
+      
     
     if (window.innerWidth > 1500) {
       this.angelImages.pop();

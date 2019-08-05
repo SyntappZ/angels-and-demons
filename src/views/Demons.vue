@@ -21,9 +21,9 @@ export default {
 
     demonsList.forEach((x, i) => {
       this.demons.push({
-        title: x.demon,
+        title: x.demon.replace(/-/g, ' '),
         religion: x.religion,
-        name: names[i]
+        name: names[i].replace(/-/g, ' ')
       });
     });
 
