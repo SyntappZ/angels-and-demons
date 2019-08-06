@@ -14,6 +14,9 @@ export default {
    
     midPage
   },
+  created() {
+    this.$store.state.images = []
+  },
   data() {
     return {
       test: ""

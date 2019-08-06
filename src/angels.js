@@ -73,12 +73,6 @@ export default [
     domain: "Solitude and Tears"
   },
   {
-    angel: "Kerubiel a.k.a Cherubiel",
-    religion: "Christianity, Judaism, Islam",
-    type: "cherub",
-    domain: "None"
-  },
-  {
     angel: "Daniel-(angel)",
     religion: "Christianity, Judaism",
     type: "Watcher",
@@ -162,14 +156,14 @@ export default [
     domain: "Wisdom, Understanding, and Judgement"
   },
   {
-    angel: "Kalka'il",
+    angel: "Kalqa'il",
     religion: "Islam",
     type: "None",
     domain: "Fifth heaven"
   },
   { angel: "Kerubiel", religion: "Judaism", type: "None", domain: "None" },
   {
-    angel: "Kiraman Katibin",
+    angel: "Kiraman-Katibin",
     religion: "Islam",
     type: "None",
     domain: "Recorders of human thoughts, acts and feelings"
@@ -181,7 +175,7 @@ export default [
     domain: "Punishment"
   },
   {
-    angel: "Leliel",
+    angel: "Lailah",
     religion: "Christianity, Judaism",
     type: "None",
     domain: "Night"
@@ -249,12 +243,6 @@ export default [
     domain: "Eternity"
   },
   {
-    angel: "Nithael",
-    religion: "Christianity, Judaism",
-    type: "Principality",
-    domain: "None"
-  },
-  {
     angel: "Nuriel",
     religion: "Jewish mythology",
     type: "None",
@@ -279,12 +267,7 @@ export default [
     type: "Archangel",
     domain: "Repentance and hope"
   },
-  {
-    angel: "Poyel",
-    religion: "Christianity, Judaism",
-    type: "Principality",
-    domain: "None"
-  },
+  
   {
     angel: "Pravuil",
     religion: "Jewish mythology",
@@ -297,21 +280,16 @@ export default [
     type: "None",
     domain: "Examines the souls of those brought to heaven"
   },
-  {
-    angel: "Qaphsiel",
-    religion: "Christianity, Judaism",
-    type: "None",
-    domain: "Angel of tears, temperance. Presides over the deaths of kings."
-  },
+  
  
   {
-    angel: "Raguel, also known in Arabic texts as Azrael",
+    angel: "Raguel-(angel)",
     religion: "Christianity, Judaism, Islam",
     type: "Archangel",
     domain: "Angel of Justice"
   },
   {
-    angel: "Raphael, also known in Arabic texts as Israfel",
+    angel: "Raphael-(archangel)",
     religion: "Christianity, Judaism, Islam, Mormonism, Yazdânism",
     type: "Archangel, leader of the Virtues, one of the cherubim",
     domain:
@@ -324,7 +302,7 @@ export default [
     domain: "Keeper of Secrets"
   },
   {
-    angel: "Remiel",
+    angel: "Ramiel",
     religion: "Christianity, Judaism",
     type: "Archangel",
     domain: "None"
@@ -369,7 +347,7 @@ export default [
     domain: "None"
   },
   {
-    angel: "Schemhampharae",
+    angel: "Shem-HaMephorash",
     religion: "Christianity, Judaism",
     type: "None",
     domain:
@@ -387,12 +365,6 @@ export default [
     religion: "Christianity, Judaism",
     type: "seraph",
     domain: "Protector of Metatron, highest ranking saraphim"
-  },
-  {
-    angel: "Shamnail",
-    religion: "Yazdânism",
-    type: "Archangel",
-    domain: "None"
   },
   {
     angel: "Shamsiel",
@@ -422,15 +394,10 @@ export default [
   },
   { angel: "Uziel", religion: "Judaism", type: "Archangel", domain: "None" },
   
-  {
-    angel: "Vehuel",
-    religion: "Christianity, Judaism",
-    type: "Principality",
-    domain: "None"
-  },
+ 
   { angel: "Wormwood-(Bible)", religion: "Christianity", type: "None", domain: "war" },
   {
-    angel: "Zachariel",
+    angel: "Zerachiel",
     religion: "Christianity",
     type: "Archangel",
     domain: "None"
@@ -455,15 +422,10 @@ export default [
     domain: "None"
   },
   {
-    angel: "Zephon",
+    angel: "Zephon-(angel)",
     religion: "Jewish mythology",
     type: "None",
     domain: "None"
   },
-  {
-    angel: "Zophiel",
-    religion: "Christianity, Judaism",
-    type: "Cherubim",
-    domain: "None"
-  }
+  
 ];

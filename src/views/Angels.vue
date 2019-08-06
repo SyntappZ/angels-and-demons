@@ -14,7 +14,7 @@ export default {
   created() {
     let angels = angelsList.map(x => x.angel.replace(/,|\//, " "));
     let names = [];
-  
+    this.$store.state.images = []
     angels.forEach(x => {
       
       if(x == 'Harut' || x == 'Marut'){
@@ -67,7 +67,7 @@ export default {
         { img: "fallenAngel.jpg" },
         { img: "angel3.jpg" },
         { img: "angel4.jpg" },
-        { img: "angel5.jpg" }
+       
       ]
     };
   },

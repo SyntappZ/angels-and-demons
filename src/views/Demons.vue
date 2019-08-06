@@ -12,7 +12,7 @@ export default {
     pageDetails
   },
   created() {
-    
+    this.$store.state.images = []
     let demons = demonsList.map(x => x.demon);
     let names = [];
     demons.forEach(x => {
