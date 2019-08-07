@@ -5,8 +5,8 @@ I made this site because im a big fan on the supernatural series and thought it 
 ## making this project
 
 Making this site was fun, i got into the wiki api a lot deeper than my last project and starting to understand axios a bit better.
-Im still a bit sketchy on vuex i feel i could of used it better than i did atleast i used the api in the store this time,
-theres still work i need to do as of the time of writing this like the demons are not fully checked and fixed so some of them will bring up black pages theres a lot to go through, all angels have been checked and all work.
+Im still a bit sketchy on vuex i feel i could of used it better than i did, atleast i used the api in the store this time.
+Theres still work i need to do as of the time of writing this like the demons are not fully checked and fixed so some of them will bring up black pages theres a lot to go through, all angels have been checked and all work.
 
 
 ## tech used
