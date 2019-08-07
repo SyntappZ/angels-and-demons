@@ -5,18 +5,14 @@
         <v-flex xs12>
           <h1 class="title">{{ title }}</h1>
         </v-flex>
-  
-    
 
         <v-flex xs12>
           <div v-for="(item) in infoArray" :key="item.welcome">
             <p class="welcome">{{item.welcome}}</p>
           </div>
         </v-flex>
- 
-        
-  
-           <v-flex v-if="images.length > 0 && images.length < 4" xs12 md9 lg9>
+
+        <v-flex v-if="images.length > 0 && images.length < 4" xs12 md9 lg9>
           <div v-for="(item, i) in infoArray" :key="i">
             <h3 class="heading">{{ item.heading }}</h3>
             <p class="para">{{item.paragraph}}</p>
@@ -28,8 +24,7 @@
             <p class="para">{{item.paragraph}}</p>
           </div>
         </v-flex>
-  
-       
+
         <v-flex v-if="images.length > 0 && images.length < 4" xs12 md3 lg3>
           <div class="img-wrap" v-for="img in images" :key="img">
             <img class="img" :src="img" alt="jeff" />
@@ -57,22 +52,18 @@
 <script>
 import { mapState } from "vuex";
 import { setTimeout } from "timers";
-import Isotope from "isotope-layout";
 import { domainToUnicode } from "url";
 export default {
   created() {
-    
-      let info = this.$store.state.info;
-      this.images = this.$store.state.images;
-      this.title = this.$store.state.title;
-      this.links = this.$store.state.links;
-      info.forEach(x => this.infoArray.push(x));
+    let info = this.$store.state.info;
+    this.images = this.$store.state.images;
+    this.title = this.$store.state.title;
+    this.links = this.$store.state.links;
+    info.forEach(x => this.infoArray.push(x));
 
-
-      if (info.length < 1) {
-        this.$router.push("/");
-      }
-    
+    if (info.length < 1) {
+      this.$router.push("/");
+    }
   },
   mounted() {},
   destroyed() {},
@@ -107,7 +98,6 @@ export default {
 
 .heading {
   padding: 20px 0;
-
   font-family: "Quicksand", sans-serif;
 }
 .title {
@@ -147,11 +137,10 @@ export default {
 }
 .grid1 {
   width: 100%;
- 
- display:flex;
- flex-wrap:wrap;
+
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  
 }
 .image1 {
   width: 300px;
@@ -159,7 +148,6 @@ export default {
 
 .image1 img {
   width: 100%;
-
   filter: grayscale(100%);
 }
 
@@ -169,7 +157,6 @@ export default {
   color: rgb(22, 22, 22);
   padding: 7px 0;
   text-decoration: none;
- 
 }
 .link-title:before,
 .link-title:after {
@@ -184,7 +171,7 @@ export default {
 }
 .link:hover {
   letter-spacing: 1px;
-  color:grey;
+  color: grey;
 }
 @media (max-width: 1024px) {
   .link-title:before,
@@ -192,11 +179,14 @@ export default {
     display: none;
   }
   .title:before,
-.title:after {
- display:none;
-}
+  .title:after {
+    display: none;
+  }
   .info {
     width: 95%;
+  }
+  .img-wrap {
+    margin:auto;
   }
 }
 </style>

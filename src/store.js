@@ -58,8 +58,7 @@ export default new Vuex.Store({
       welcome = welcome[0]
         .map(x => x.paragraph)
         .join("")
-        .replace(/\. /g, ".\n")
-        
+        .replace(/\. /g, ".\n");
 
       toSort.forEach(x => {
         let head = x
@@ -85,9 +84,8 @@ export default new Vuex.Store({
       state.links = links;
     },
     getImages(state, images) {
-      state.images = []
-      state.images = images
-      
+      state.images = [];
+      state.images = images;
     },
     getName(state, name) {
       state.title = name;
@@ -112,7 +110,7 @@ export default new Vuex.Store({
         let links = [];
         if (doc.images !== undefined) {
           let imgs = doc.images.filter(x => x.title.match(/jpg$|png$/));
-          
+
           imgs.forEach(x =>
             convertImages(x.title.replace(/File:/g, ""), imgs.length)
           );
@@ -120,17 +118,17 @@ export default new Vuex.Store({
         if (doc.extlinks !== undefined) {
           doc.extlinks.forEach(x => links.push(Object.values(x).join("")));
         }
-        links = links.filter(x => x.match(/^http:\/\/www/))
-        let trimedLinks = []
-        links.forEach((x, i) =>{
-          let trimed = x.match(/www\.\w+[-.]\w+[-.]\w+|www\.\w+[-.]\w+/gi).join('')
+        links = links.filter(x => x.match(/^http:\/\/www/));
+        let trimedLinks = [];
+        links.forEach((x, i) => {
+          let trimed = x
+            .match(/www\.\w+[-.]\w+[-.]\w+|www\.\w+[-.]\w+/gi)
+            .join("");
           trimedLinks.push({
             name: trimed,
             url: x
-          }) 
-        })
-
-        
+          });
+        });
 
         commit("getLinks", trimedLinks);
       }).catch = error => console.log(error);
@@ -173,22 +171,20 @@ export default new Vuex.Store({
             origin: "*"
           }
         }).then(response => {
-          url = []
+          url = [];
           let page = response.data.query.pages;
           let id = Object.keys(page);
           let doc = page[id];
           let imgId = Object.keys(doc.imageinfo);
           let url = doc.imageinfo[imgId].url;
-            
+
           urls.push(url);
-          
-          if(urls.length == len) {
-            if(urls.length > 5) urls.length = 6;
-            
-            commit('getImages', urls)
-            
+
+          if (urls.length == len) {
+            if (urls.length > 5) urls.length = 6;
+
+            commit("getImages", urls);
           }
-          
         }).catch = error => console.log(error);
       }
     }

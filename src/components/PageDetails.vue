@@ -18,37 +18,32 @@
             <img :src="image.img" alt="no image" />
           </div>
         </v-flex>
-        <v-flex xs12>
-         
-        </v-flex>
+        <v-flex xs12></v-flex>
       </v-layout>
     </v-container>
   </div>
 </template>
 
 <script>
-
 export default {
   props: ["list", "title", "images", "religion"],
 
   created() {
-    
     this.labels = this.religion.map(x => x.religion);
     this.value = this.religion.map(x => x.amount);
-    
   },
 
   data() {
     return {
       labels: [],
       value: [],
-      page: ''
+      page: ""
     };
   },
   methods: {
     getInfo(name) {
-      this.$store.dispatch('loadInfo', name, this.page);
-       this.$router.push("/Information");
+      this.$store.dispatch("loadInfo", name, this.page);
+      this.$router.push("/Information");
     }
   }
 };
@@ -100,6 +95,7 @@ export default {
   }
   .list-wrap {
     text-align: center;
+    width: 98%;
   }
   .link {
     padding: 10px 0;
@@ -116,9 +112,5 @@ export default {
   .hyphen {
     display: none;
   }
-}
-@media (max-width: 600px) {
-}
-@media (min-width: 1500px) {
 }
 </style>
