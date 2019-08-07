@@ -97,7 +97,7 @@ export default new Vuex.Store({
     loadInfo({ commit }, name) {
       axios({
         method: "get",
-        url: "http://en.wikipedia.org/w/api.php",
+        url: "https://en.wikipedia.org/w/api.php",
         params: {
           action: "query",
           titles: name,
@@ -137,7 +137,7 @@ export default new Vuex.Store({
 
       axios({
         method: "get",
-        url: "http://en.wikipedia.org/w/api.php",
+        url: "https://en.wikipedia.org/w/api.php",
         params: {
           action: "query",
           titles: name,
