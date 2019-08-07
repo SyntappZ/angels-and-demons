@@ -21,12 +21,11 @@ export default {
 
     demonsList.forEach((x, i) => {
       this.demons.push({
-        title: x.demon.replace(/-/g, ' '),
+        title: x.demon.replace(/-/g, ' ').replace(/=/g, '-'),
         religion: x.religion,
-        name: names[i].replace(/-/g, ' ')
+        name: names[i].replace(/-/g, ' ').replace(/=/g, '-')
       });
     });
-
     if (window.innerWidth > 1500) {
       this.demonImages.length = 7;
     }
