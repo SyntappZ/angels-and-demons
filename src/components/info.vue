@@ -85,7 +85,7 @@ export default {
 .info {
   width: 80%;
   margin: auto;
-  font-weight: 600;
+  font-weight: 500;
   padding-bottom: 30px;
 }
 
