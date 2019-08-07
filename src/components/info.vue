@@ -61,7 +61,7 @@ import Isotope from "isotope-layout";
 import { domainToUnicode } from "url";
 export default {
   created() {
-    setTimeout(() => {
+    
       let info = this.$store.state.info;
       this.images = this.$store.state.images;
       this.title = this.$store.state.title;
@@ -72,7 +72,7 @@ export default {
       if (info.length < 1) {
         this.$router.push("/");
       }
-    }, 500);
+    
   },
   mounted() {},
   destroyed() {},
