@@ -179,7 +179,7 @@ export default new Vuex.Store({
           let doc = page[id];
           let imgId = Object.keys(doc.imageinfo);
           let url = doc.imageinfo[imgId].url;
-
+            
           urls.push(url);
           
           if(urls.length == len) {

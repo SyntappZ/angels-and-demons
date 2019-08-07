@@ -68,7 +68,7 @@ export default {
       this.links = this.$store.state.links;
       info.forEach(x => this.infoArray.push(x));
 
-console.log(this.infoArray.length)
+
       if (info.length < 1) {
         this.$router.push("/");
       }
