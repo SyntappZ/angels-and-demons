@@ -20,6 +20,6 @@ theres still work i need to do as of the time of writing this like the demons ar
  
  ## future improvements
  
-- not all demon pages will work yet.
+- fix all demon pages.
 - images layout could be better.
 - archangel page
