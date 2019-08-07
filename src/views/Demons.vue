@@ -64,7 +64,7 @@ export default {
         { img: "demon5.jpg" },
         { img: "demon6.jpg" },
         { img: "demon7.jpg" },
-        { img: "demon8.jpg" },
+       
         { img: "demon9.jpg" }
       ]
     };

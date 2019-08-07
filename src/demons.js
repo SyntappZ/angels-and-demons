@@ -14,7 +14,6 @@ export default [
   { demon: "Agares", religion: "Christian demonology" },
   { demon: "Agiel", religion: "Jewish mythology" },
   { demon: "Ahriman/Angra", religion: "Zoroastrianism" },
-  { demon: "Aim/Haborym", religion: "Christian demonology" },
   { demon: "Aka-Manah", religion: "Zoroastrianism" },
   { demon: "Ala", religion: "Slavic mythology" },
   { demon: "Alal", religion: "Chaldean mythology" },
@@ -22,14 +21,13 @@ export default [
   { demon: "Allocer/Alloces", religion: "Christian demonology" },
   { demon: "Alû", religion: "Akkadian mythology" },
   { demon: "Amaymon", religion: "Christian demonology" },
-  { demon: "Amdusias", religion: "Christian demonology" },
   { demon: "Amy-(demon)", religion: "Christian demonology" },
   { demon: "Anammelech", religion: "Assyrian mythology" },
-  { demon: "Ancitif", religion: "Christian demonology" },
+  
   { demon: "Andhaka", religion: "Hindu mythology" },
-  { demon: "Andras", religion: "Christian demonology" },
-  { demon: "Andrealphus", religion: "Christian demonology" },
-  { demon: "Andromalius", religion: "Christian demonology" },
+  
+ 
+ 
   { demon: "Antichrist", religion: "Christian eschatology" },
   { demon: "Anzu", religion: "Sumerian mythology" },
   { demon: "Apep", religion: "Egyptian mythology" },
@@ -37,26 +35,26 @@ export default [
   { demon: "Archon", religion: "Gnosticism" },
   { demon: "Arunasura", religion: "Hindu mythology" },
   { demon: "Asag", religion: "Sumerian demonology" },
-  { demon: "Asakku", religion: "Babylonian mythology" },
-  { demon: "Asb'el", religion: "Jewish mythology" },
+ 
+ 
   {
-    demon: "Asmodai/Asmodeus",
+    demon: "Asmodeus/Asmodai",
     religion: "Jewish folklore, Christian mythology, Islamic folklore"
   },
   { demon: "Astaroth", religion: "Christian demonology" },
   { demon: "Asura", religion: "Hindu mythology" },
   { demon: "Azazel/Azaz'el", religion: "Jewish mythology, Islamic mythology" },
   { demon: "Azi", religion: "Zoroastrianism" },
-  { demon: "Baal/Bael", religion: "Christian demonology" },
+  { demon: "Baal-(demon)", religion: "Christian demonology" },
   { demon: "Babi", religion: "Indonesian mythology" },
   { demon: "Bakasura", religion: "Hindu mythology" },
   { demon: "Baku", religion: "Japanese mythology" },
-  { demon: "Balam", religion: "Christian demonology" },
-  { demon: "Balberith", religion: "Jewish demonology" },
-  { demon: "Bali", religion: "Hindu mythology" },
+  { demon: "Balam-(demon)", religion: "Christian demonology" },
+  { demon: "Baal-Berith", religion: "Jewish demonology" },
+ 
   { demon: "Banshee", religion: "Irish mythology" },
   { demon: "Baphomet", religion: "Christian folklore" },
-  { demon: "Barbas", religion: "Christian demonology" },
+  
   { demon: "Barbatos", religion: "Christian demonology" },
   { demon: "Barong", religion: "Indonesian mythology" },
   { demon: "Bathin/Mathim/Bathym/Marthim", religion: "Christian demonology" },
@@ -65,15 +63,12 @@ export default [
   { demon: "Belial", religion: "Jewish Christian demonology" },
   { demon: "Beleth", religion: "Christian demonology" },
   { demon: "Belphegor", religion: "Christian demonology" },
-  {
-    demon: "Berith/Beherit",
-    religion: "Phoenician mythology, Christian demonology"
-  },
-  { demon: "Bhūta", religion: "Hindu mythology" },
-  { demon: "Bifrons", religion: "Christian demonology" },
-  { demon: "Boruta", religion: "Slavic mythology" },
+ 
+  { demon: "Bhoot-(ghost)/Bhūta", religion: "Hindu mythology" },
+  { demon: "Bifrons-(demon)", religion: "Christian demonology" },
+ 
   { demon: "Botis", religion: "Christian demonology" },
-  { demon: "Buer", religion: "Christian demonology" },
+  { demon: "Buer-(demon)", religion: "Christian demonology" },
   { demon: "Bukavac", religion: "Slavic mythology" },
   { demon: "Bune", religion: "Christian demonology" },
   { demon: "Bushyasta", religion: "Zoroastrianism" },
@@ -148,6 +143,7 @@ export default [
   { demon: "Legion", religion: "Christian demonology" },
   { demon: "Lechies", religion: "Slavic mythology" },
   { demon: "Leonard", religion: "Christian demonology" },
+  { demon: "Leshy", religion: "Slavic mythology" },
   { demon: "Leyak", religion: "Indonesian mythology" },
   { demon: "Lempo", religion: "Finnish mythology" },
   { demon: "Leraje/Leraie", religion: "Christian demonology" },
@@ -157,9 +153,11 @@ export default [
   { demon: "Ljubi", religion: "Albanian mythology" },
   { demon: "Lucifer", religion: "Christian theology" },
   { demon: "Lucifuge", religion: "Christian demonology" },
+  { demon: "Mahabali", religion: "Hindu mythology" },
   { demon: "Malphas", religion: "Christian demonology" },
   { demon: "Mammon", religion: "Christian mythology" },
   { demon: "Mara", religion: "Buddhist mythology" },
+  { demon: "Marbas", religion: "Christian demonology" },
   { demon: "Maricha", religion: "Hindu mythology" },
   { demon: "Marax/Morax/Foraii", religion: "Christian demonology" },
   { demon: "Marchosias", religion: "Christian demonology" },

@@ -5,13 +5,18 @@
         <v-flex xs12>
           <h1 class="title">{{ title }}</h1>
         </v-flex>
+  
+    
 
         <v-flex xs12>
           <div v-for="(item) in infoArray" :key="item.welcome">
             <p class="welcome">{{item.welcome}}</p>
           </div>
         </v-flex>
-        <v-flex v-if="images.length > 0 && images.length < 4" xs12 md9>
+ 
+        
+  
+           <v-flex v-if="images.length > 0 && images.length < 4" xs12 md9 lg9>
           <div v-for="(item, i) in infoArray" :key="i">
             <h3 class="heading">{{ item.heading }}</h3>
             <p class="para">{{item.paragraph}}</p>
@@ -23,7 +28,9 @@
             <p class="para">{{item.paragraph}}</p>
           </div>
         </v-flex>
-        <v-flex v-if="images.length > 0 && images.length < 4" xs12 md3>
+  
+       
+        <v-flex v-if="images.length > 0 && images.length < 4" xs12 md3 lg3>
           <div class="img-wrap" v-for="img in images" :key="img">
             <img class="img" :src="img" alt="jeff" />
           </div>
@@ -61,7 +68,7 @@ export default {
       this.links = this.$store.state.links;
       info.forEach(x => this.infoArray.push(x));
 
-
+console.log(this.infoArray.length)
       if (info.length < 1) {
         this.$router.push("/");
       }
@@ -87,7 +94,7 @@ export default {
 .info {
   width: 80%;
   margin: auto;
-  font-weight: 500;
+  font-weight: 600;
   padding-bottom: 30px;
 }
 
@@ -184,6 +191,10 @@ export default {
   .link-title:after {
     display: none;
   }
+  .title:before,
+.title:after {
+ display:none;
+}
   .info {
     width: 95%;
   }
