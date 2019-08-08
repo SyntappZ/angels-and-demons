@@ -12,31 +12,20 @@
           </div>
         </v-flex>
 
-        <v-flex v-if="images.length > 0 && images.length <= 6" xs12 md9 lg9>
+        <v-flex xs12 md9 lg9>
           <div v-for="(item, i) in infoArray" :key="i">
             <h3 class="heading">{{ item.heading }}</h3>
             <p class="para">{{item.paragraph}}</p>
           </div>
         </v-flex>
-        <v-flex v-else xs12>
-          <div v-for="(item, i) in infoArray" :key="i">
-            <h3 class="heading">{{ item.heading }}</h3>
-            <p class="para">{{item.paragraph}}</p>
-          </div>
-        </v-flex>
+      
 
-        <v-flex v-if="images.length > 0 && images.length <= 6" xs12 md3 lg3>
+        <v-flex xs12 md3 lg3>
           <div class="img-wrap" v-for="img in images" :key="img">
             <img class="img" :src="img" alt="jeff" />
           </div>
         </v-flex>
-        <v-flex v-else xs12>
-          <div class="grid1">
-            <div class="image1" v-for="img in images" :key="img">
-              <img :src="img" alt="jeff" />
-            </div>
-          </div>
-        </v-flex>
+       
 
         <v-flex v-if="links.length > 0" xs12>
           <h2 class="link-title">External Links</h2>

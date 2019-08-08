@@ -84,7 +84,7 @@ export default new Vuex.Store({
       state.links = links;
     },
     getImages(state, images) {
-      state.images = [];
+      
       state.images = images;
     },
     getName(state, name) {
@@ -181,7 +181,7 @@ export default new Vuex.Store({
           urls.push(url);
 
           if (urls.length == len) {
-            if (urls.length > 5) urls.length = 6;
+            
 
             commit("getImages", urls);
           }
