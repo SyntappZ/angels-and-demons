@@ -27,7 +27,7 @@ export default {
       });
     });
     if (window.innerWidth > 1500) {
-      this.demonImages.length = 7;
+      this.demonImages.length = 6;
     }
 
     let religions = this.demons
@@ -61,9 +61,7 @@ export default {
         { img: "demon3.jpg" },
         { img: "demon4.jpg" },
         { img: "demon5.jpg" },
-        { img: "demon6.jpg" },
         { img: "demon7.jpg" },
-       
         { img: "demon9.jpg" }
       ]
     };

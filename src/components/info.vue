@@ -12,7 +12,7 @@
           </div>
         </v-flex>
 
-        <v-flex v-if="images.length > 0 && images.length < 4" xs12 md9 lg9>
+        <v-flex v-if="images.length > 0 && images.length <= 6" xs12 md9 lg9>
           <div v-for="(item, i) in infoArray" :key="i">
             <h3 class="heading">{{ item.heading }}</h3>
             <p class="para">{{item.paragraph}}</p>
@@ -25,7 +25,7 @@
           </div>
         </v-flex>
 
-        <v-flex v-if="images.length > 0 && images.length < 4" xs12 md3 lg3>
+        <v-flex v-if="images.length > 0 && images.length <= 6" xs12 md3 lg3>
           <div class="img-wrap" v-for="img in images" :key="img">
             <img class="img" :src="img" alt="jeff" />
           </div>

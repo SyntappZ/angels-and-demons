@@ -15,7 +15,7 @@ export default [
   { demon: "Agiel", religion: "Jewish mythology" },
   { demon: "Ahriman/Angra", religion: "Zoroastrianism" },
   { demon: "Aka-Manah", religion: "Zoroastrianism" },
-  
+
   { demon: "Ala", religion: "Slavic mythology" },
   { demon: "Alal", religion: "Chaldean mythology" },
   { demon: "Alastor", religion: "Christian demonology" },
@@ -82,27 +82,25 @@ export default [
   { demon: "Dagon", religion: "Semitic mythology" },
 
   { demon: "Dantalion", religion: "Christian demonology" },
- 
-  
+
   { demon: "Demiurge", religion: "Gnostic mythology" },
   { demon: "Demogorgon", religion: "Christian demonology" },
   { demon: "Devil", religion: "Christian demonology" },
-  { demon: 'Div=e-Sepid', religion: 'persian mythology'},
+  { demon: "Div=e-Sepid", religion: "persian mythology" },
   { demon: "Djall", religion: "Albanian mythology" },
   { demon: "Drekavac", religion: "Slavic mythology" },
   { demon: "Dzoavits", religion: "Native American mythology" },
-  
-  
+
   { demon: "Eisheth", religion: "Jewish demonology" },
   { demon: "Erlik", religion: "Turkish mythology" },
-  
+
   { demon: "Foras/Forcas/Forras", religion: "Christian demonology" },
   { demon: "Forneus", religion: "Christian demonology" },
   { demon: "Furcas/Forcas", religion: "Christian demonology" },
   { demon: "Furfur", religion: "Christian demonology" },
   { demon: "Gaap", religion: "Christian demonology" },
   { demon: "Gadreel/Gader'el", religion: "Jewish demonology" },
- 
+
   { demon: "Gamigin", religion: "Christian demonology" },
   { demon: "Ghoul", religion: "Arabian" },
   {
@@ -111,7 +109,7 @@ export default [
   },
   { demon: "Gorgon", religion: "Greek mythology" },
   { demon: "Gremory/Gomory", religion: "Christian demonology" },
-  
+
   { demon: "Gualichu", religion: "Mapuche mythology" },
   { demon: "Guayota", religion: "Guanche mythology" },
   { demon: "Gusion/Gusoin/Gusoyn", religion: "Christian demonology" },
@@ -155,7 +153,7 @@ export default [
   { demon: "Al=Masih-ad=Dajjal", religion: "Islamic eschatology" },
   { demon: "Mastema", religion: "Jewish demonology" },
   { demon: "Mephistopheles", religion: "Christian folklore, German folklore" },
- 
+
   {
     demon: "Moloch",
     religion: "Jewish, Pagan and Christian mythology, Scientology"
@@ -178,44 +176,45 @@ export default [
   { demon: "Pelesit", religion: "Indonesian and Malaysian mythology" },
   { demon: "Phenex", religion: "Christian demonology" },
   { demon: "Penemue", religion: "Jewish and Christian mythology" },
-  { demon: "Pithius", religion: "Christian demonology" },
   { demon: "Pocong", religion: "Indonesian & Malaysia mythology" },
-  { demon: "Pontianak", religion: "Indonesian and Malaysian mythology" },
+  {
+    demon: "Pontianak-(folklore)",
+    religion: "Indonesian and Malaysian mythology"
+  },
   { demon: "Preta", religion: "Buddhist demonology" },
-  { demon: "Pruflas", religion: "Christian demonology" },
+  { demon: "Purson", religion: "Christian demonology" },
   { demon: "Puloman", religion: "Hindu mythology" },
-  { demon: "Peth", religion: "French demonology" },
   { demon: "Rahab", religion: "Jewish folklore" },
   { demon: "Raum", religion: "Christian demonology" },
   { demon: "Ronove", religion: "Christian demonology" },
   { demon: "Rusalka", religion: "Slavic mythology" },
   { demon: "Rakshasa", religion: "Hindu mythology" },
   { demon: "Rangda", religion: "Indonesian mythology" },
-  { demon: "Sabnock", religion: "Christian demonology" },
-  { demon: "Saleos", religion: "Christian demonology" },
+
   { demon: "Samael", religion: "Jewish and Gnostic mythology" },
-  { demon: "Salpsan", religion: "Christian demonology" },
+
   {
     demon: "Satan",
     religion: "Jewish, Christian, and Islamic theology"
   },
-  { demon: "Set", religion: "Egyptian mythology" },
-  { demon: "Seir", religion: "Christian demonology" },
-  { demon: "Semyaza", religion: "Jewish mythology" },
+  { demon: "Set-(deity)", religion: "Egyptian mythology" },
+
+  { demon: "Samyaza", religion: "Jewish mythology" },
   { demon: "Shax/Chax", religion: "Christian demonology" },
   { demon: "Shaitan", religion: "Jewish, Islamic demonology" },
   { demon: "Shedim", religion: "Jewish folklore" },
-  { demon: "Silver", religion: "Buddhism demonology" },
-  { demon: "Sitri", religion: "Christian demonology" },
-  { demon: "Sthenno", religion: "Greek mythology" },
+  { demon: "Stheno", religion: "Greek mythology" },
   { demon: "Stihi", religion: "Albanian mythology" },
   { demon: "Stolas/Solas", religion: "Christian demonology" },
   { demon: "Suanggi", religion: "Indonesian mythology" },
   { demon: "Succubus", religion: "Christian folklore" },
   { demon: "Surgat", religion: "Christian demonology" },
   { demon: "Shinigami", religion: "Japanese mythology" },
-  { demon: "Shuten", religion: "Japanese Mythology" },
-  { demon: "Tannin", religion: "Cannanite, Phoenician, Jewish mythology" },
+  { demon: "Shuten=dōji", religion: "Japanese Mythology" },
+  {
+    demon: "Tannin-(monster)",
+    religion: "Cannanite, Phoenician, Jewish mythology"
+  },
   { demon: "El Tío", religion: "Folk Catholicism" },
   { demon: "Titivillus", religion: "None" },
   { demon: "Toyol", religion: "Indonesian and Malaysian mythology" },
@@ -227,12 +226,9 @@ export default [
   { demon: "Vapula", religion: "Christian demonology" },
   { demon: "Vassago", religion: "Christian demonology" },
   { demon: "Vepar", religion: "Christian demonology" },
-  { demon: "Vine", religion: "Christian demonology" },
+  { demon: "Vine-(demon)", religion: "Christian demonology" },
   { demon: "Wechuge", religion: "Athabaskan mythology" },
   { demon: "Wendigo", religion: "Algonquin mythology" },
-  { demon: "Yeqon", religion: "Jewish mythology" },
-  { demon: "Zagan", religion: "Christian demonology" },
-  { demon: "Zepar", religion: "Christian demonology" },
-  { demon: "Ziminiar", religion: "Christian demonology" },
-  { demon: "Zozo", religion: "Christian Demonology" }
+
+  { demon: "Ziminiar", religion: "Christian demonology" }
 ];
