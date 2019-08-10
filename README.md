@@ -20,6 +20,10 @@ Theres still work i need to do as of the time of writing this like the demons ar
  
  ## future improvements
  
-- fix all demon pages.
+- ~~fix all demon pages.~~ (fixed)
 - images layout could be better.
 - archangel page
+
+![2019-08-10](https://user-images.githubusercontent.com/42116608/62815384-4996c800-bb10-11e9-9a43-1d2548ea6cbf.png)
+![2019-08-10 (1)](https://user-images.githubusercontent.com/42116608/62815382-4996c800-bb10-11e9-9502-06697fc6bb81.png)
+![2019-08-10 (2)](https://user-images.githubusercontent.com/42116608/62815383-4996c800-bb10-11e9-9150-9592cd5ceea1.png)
