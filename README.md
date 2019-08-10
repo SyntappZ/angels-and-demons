@@ -1,6 +1,6 @@
 # angels-and-demons
 
-I made this site because im a big fan on the supernatural series and thought it would be good to get some information on what the angel and demon characters are actually based on.
+I made this site because im a big fan of the supernatural series and thought it would be good to get some information on what the angel and demon characters are actually based on.
 
 ## making this project
 
