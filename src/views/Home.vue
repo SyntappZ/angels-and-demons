@@ -1,21 +1,21 @@
 <template>
-  
-  <midPage />
-  
-  
-  
+  <div>
+    <midPage />
+
+    <religion />
+  </div>
 </template>
 
 <script>
-
-import midPage from '@/components/MiddlePage'
+import religion from "@/components/ReligionLine";
+import midPage from "@/components/MiddlePage";
 export default {
   components: {
-   
+    religion,
     midPage
   },
   created() {
-    this.$store.state.images = []
+    this.$store.state.images = [];
   },
   data() {
     return {
@@ -29,13 +29,11 @@ export default {
 </script>
 
 <style scoped>
-
 .welcome {
   text-align: center;
 }
 
 @media (max-width: 900px) {
- 
 }
 </style>
 

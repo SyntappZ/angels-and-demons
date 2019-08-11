@@ -1,7 +1,8 @@
 <template>
-  <div class="midPage">
+<div class="bg">
+   
     <topImg bgImg="demon.jpg" theSkew="Welcome To Angels & Demons" />
-
+<div class="midPage">
     <v-container grid-list-md text-center>
       <v-layout wrap class="layout-wrap">
         <v-flex xs12>
@@ -16,18 +17,12 @@
           <h3 class="img-title">{{ image.title }}</h3>
         </v-flex>
 
-        <v-flex xs12>
-          <div class="title">
-            <h4>Mythology links</h4>
-          </div>
-        </v-flex>
-
-        <v-flex v-for="link in mythology" :key="link.title" xs12 sm6 md4 lg2>
-          <a :href="link.url" target="_blank">{{ link.title }}</a>
-        </v-flex>
+      
       </v-layout>
     </v-container>
   </div>
+</div>
+ 
 </template>
 
 <script>
@@ -55,33 +50,7 @@ export default {
           title: "Lilith"
         }
       ],
-      mythology: [
-        {
-          url: "https://en.wikipedia.org/wiki/Akkadian_literature#Mythology",
-          title: "Akkadian"
-        },
-        {
-          url: "https://en.wikipedia.org/wiki/Greek_mythology",
-          title: "Greek"
-        },
-        {
-          url: "https://en.wikipedia.org/wiki/Christian_mythology",
-          title: "Christian"
-        },
-        {
-          url: "https://en.wikipedia.org/wiki/Hindu_mythology",
-          title: "Hindu"
-        },
-        {
-          url: "https://en.wikipedia.org/wiki/Japanese_mythology",
-          title: "Japanese"
-        },
-        {
-          url:
-            "https://en.wikipedia.org/wiki/Mythologies_of_the_indigenous_peoples_of_the_Americas",
-          title: "Americas"
-        }
-      ]
+    
     };
   },
   computed: {}
@@ -94,12 +63,16 @@ export default {
   width: 80%;
   margin: auto;
 }
+.bg {
+  width:100%;
+  text-align: center;
+}
 
 .title {
   height: 60px;
   line-height: 60px;
 
-  margin: 30x auto;
+  margin: 50px auto;
 }
 .title h4 {
   font-family: Arial, Helvetica, sans-serif;
@@ -149,18 +122,7 @@ h1 {
 .img-title-wrap {
   margin: 50px 0;
 }
-a {
-  display: inline-block;
-  color: #333;
-  text-decoration: none;
-  padding: 10px 0;
-  margin: 20px 0;
-  transition: 0.3s;
-}
-a:hover {
-  text-shadow: 0 0 10px #333;
-  letter-spacing: 1px;
-}
+
 
 @media (max-width: 1024px) {
   .midPage {

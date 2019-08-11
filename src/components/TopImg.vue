@@ -7,9 +7,9 @@
       </div>
 
       <h5>
-      Information on many types of demons, <br> or angels if thats how you are.
+      Information on many types of demons, <br> or angels if thats what you like.
       </h5>
-      <a href>
+      <a href="https://en.wikipedia.org/wiki/Demonology" target="_blank">
         <button class="btn">
           more info
           <i class="fas fa-arrow-right"></i>
@@ -30,6 +30,7 @@ export default {
 .background {
   width: 100%;
   position: relative;
+  
 }
 .bg-img {
   width: 100%;
