@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <h4>Created By: SyntappZ</h4>
+    <h4>SyntappZ</h4>
   </div>
 </template>
 

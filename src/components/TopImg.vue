@@ -36,7 +36,7 @@ export default {
   width: 100%;
   object-fit: cover;
   object-position: 0 0;
-  height: 70vh;
+  height: 90vh;
 }
 .welcome-wrap {
   position: absolute;
@@ -84,6 +84,7 @@ h5 {
   
   .bg-img {
     object-position: 100% 0;
+    height:60vh;
   }
   .welcome-wrap {
     width: 100%;

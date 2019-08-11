@@ -2,7 +2,7 @@
   <div>
     <div class="bg">
       <div class="line">
-         <h3>Angel Religions</h3>
+        <h3>Angel Religions</h3>
         <v-sparkline
           class="spark"
           :value="value"
@@ -15,26 +15,25 @@
           :type="type"
           :show-labels="true"
           :labels="labels"
-          label-size="5"
-          auto-draw
+          label-size="4"
+         
         ></v-sparkline>
-      
       </div>
     </div>
-    <div class="jeff">
-        <v-container grid-list-md text-center>
-    <v-layout wrap>
-      <v-flex xs12>
-        <div class="title">
-          <h4>Mythology links</h4>
-        </div>
-      </v-flex>
+    <div class="myth">
+      <v-container grid-list-md text-center>
+        <v-layout wrap>
+          <v-flex xs12>
+            <div class="title">
+              <h4>Mythology links</h4>
+            </div>
+          </v-flex>
 
-      <v-flex v-for="link in mythology" :key="link.title" xs12 sm6 md4 lg2>
-        <a :href="link.url" target="_blank">{{ link.title }}</a>
-      </v-flex>
-       </v-layout>
-  </v-container>
+          <v-flex v-for="link in mythology" :key="link.title" xs12 sm6 md4 lg2>
+            <a :href="link.url" target="_blank">{{ link.title }}</a>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </div>
   </div>
 </template>
@@ -48,15 +47,15 @@ export default {
       angels: [],
       religion: [],
       labels: [],
-      width: 4,
-      radius: 3,
-      padding: 4,
+      width: 8,
+      radius: 0,
+      padding: 6,
       lineCap: "round",
       color: "#fff",
       value: [],
       fill: false,
       type: "bar",
-        mythology: [
+      mythology: [
         {
           url: "https://en.wikipedia.org/wiki/Akkadian_literature#Mythology",
           title: "Akkadian"
@@ -125,12 +124,15 @@ export default {
         amount: splitArr.filter(x => x == types[i]).length
       });
     }
-    console.log(this.religion);
   },
   mounted() {
     this.value = this.religion.map(x => x.amount);
     this.labels = this.religion.map(x => x.religion);
-    console.log(this.labels)
+
+   
+  },
+  computed: {
+    
   }
 };
 </script>
@@ -139,7 +141,6 @@ export default {
 .bg {
   width: 100%;
   background-color: #111;
-  min-height: 60vh;
 }
 .line {
   width: 80%;
@@ -147,17 +148,20 @@ export default {
   text-align: center;
   padding-top: 50px;
   color: white;
+  background: rgba(167, 167, 167, 0.062);
+  outline: white solid 1px;
+  letter-spacing: 0.2px;
 }
-.jeff {
-    width: 80%;
+.myth {
+  width: 80%;
   margin: auto;
   text-align: center;
-  padding-top: 50px;
   color: white;
 }
 h3 {
-    padding:20px 0;
-    letter-spacing: 2px;
+  padding: 20px 0;
+  letter-spacing: 2px;
+  font-weight: 100;
 }
 .spark {
   margin-top: 50px;
@@ -201,5 +205,42 @@ a:hover {
   text-shadow: 0 0 10px #333;
   letter-spacing: 1px;
 }
+@media (max-width: 1024px) {
+  .line,
+  .myth {
+    width: 100%;
+  }
+  .title h4:before,
+  .title h4:after {
+    width: 50px;
+  }
+}
 
+@media (max-width: 600px) {
+  .line,
+  .myth {
+    width: 100%;
+    outline: none;
+  }
+  .title h4 {
+    font-size: 18px;
+    border-bottom: #000 solid 3px;
+  }
+  .title h4:before,
+  .title h4:after {
+    width: 0;
+  }
+  .title {
+    margin: 0 auto 40px auto;
+    border-bottom: solid;
+    width: 80%;
+  }
+  a {
+    border: solid 2px #333;
+    width: 80%;
+    padding: 15px 0;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+}
 </style>
