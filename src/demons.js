@@ -28,7 +28,7 @@ export default [
   { demon: "Andhaka", religion: "Hindu mythology" },
 
   { demon: "Antichrist", religion: "Christian eschatology" },
-  { demon: "Anzu", religion: "Sumerian mythology" },
+  { demon: "Anzû", religion: "Sumerian mythology" },
   { demon: "Apep", religion: "Egyptian mythology" },
   { demon: "Armaros", religion: "Jewish demonology" },
   { demon: "Archon", religion: "Gnosticism" },
