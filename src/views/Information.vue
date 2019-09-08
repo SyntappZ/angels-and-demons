@@ -12,25 +12,35 @@
 <script>
 import info from "../components/info";
 import { setTimeout } from "timers";
-
+import { mapState } from "vuex";
 export default {
   components: {
     info
   },
-  created() {
-    setTimeout(() => {
-      this.loaded = true;
-    }, 500);
-  },
+  
   destroyed() {
     this.loaded = false;
+    
   },
   data() {
     return {
-      loaded: false
+      loaded: false,
+     
     };
   },
-  computed: {}
+  computed: {
+    ...mapState(['allLoaded'])
+  },
+  watch: {
+    allLoaded(val) {
+     if(val.length === 3) {
+       this.loaded = true;
+       this.$store.state.allLoaded = []
+     }
+    
+    }
+      
+  }
 };
 </script>
 

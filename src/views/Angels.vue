@@ -11,37 +11,33 @@ export default {
   components: {
     pageDetails
   },
-  created() {
+  mounted() {
     let angels = angelsList.map(x => x.angel.replace(/,|\//, " "));
     let names = [];
-    this.$store.state.images = []
+    this.$store.state.images = [];
     angels.forEach(x => {
-      
-      if(x == 'Harut' || x == 'Marut'){
-        names.push('Harut and Marut')
-      }  
-    else  if(x == 'Munkar' || x == 'Nakir') {
-        names.push('Munkar and Nakir')
-      }
-      else {
+      if (x == "Harut" || x == "Marut") {
+        names.push("Harut and Marut");
+      } else if (x == "Munkar" || x == "Nakir") {
+        names.push("Munkar and Nakir");
+      } else {
         names.push(x.split(" ")[0]);
       }
-      
-      
     });
- 
+
     angelsList.forEach((x, i) => {
       this.angels.push({
-        title: x.angel.replace(/-/g, ' '),
+        title: x.angel.replace(/-/g, " "),
         religion: x.religion,
-        name: names[i].replace(/-/g, ' ')
+        name: names[i].replace(/-/g, " ")
       });
     });
-      
-    
+
     if (window.innerWidth > 1500) {
       this.angelImages.pop();
     }
+
+    //religions
 
     let religions = this.angels.map(x => x.religion);
     let splitArr = religions
@@ -63,11 +59,11 @@ export default {
     return {
       angels: [],
       religion: [],
+      loaded: false,
       angelImages: [
         { img: "fallenAngel.jpg" },
         { img: "angel3.jpg" },
-        { img: "angel4.jpg" },
-       
+        { img: "angel4.jpg" }
       ]
     };
   },
@@ -84,5 +80,9 @@ export default {
 .angels {
   background-color: rgb(240, 240, 240);
   border-top: solid 3px #333;
+}
+.loader {
+  margin-top: 30px;
+  text-align: center;
 }
 </style>

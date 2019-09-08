@@ -10,9 +10,15 @@ export default new Vuex.Store({
     info: [],
     links: [],
     images: [],
-    title: ""
+    title: "",
+    loaded: false,
+    isImages: '',
+    allLoaded: []
   },
   mutations: {
+   
+
+    
     getSections(state, sections) {
       let arr = [];
 
@@ -82,17 +88,23 @@ export default new Vuex.Store({
     },
     getLinks(state, links) {
       state.links = links;
+      state.allLoaded.push(true)
     },
     getImages(state, images) {
-      
       state.images = images;
+      state.allLoaded.push(true)
     },
     getName(state, name) {
       state.title = name;
+      state.allLoaded.push(true)
+    },
+    noImages(state) {
+      state.allLoaded.push('none')
     }
   },
   actions: {
     loadInfo({ commit }, name) {
+      
       axios({
         method: "get",
         url: "https://en.wikipedia.org/w/api.php",
@@ -108,13 +120,18 @@ export default new Vuex.Store({
         let id = Object.keys(page);
         let doc = page[id];
         let links = [];
+       
         if (doc.images !== undefined) {
           let imgs = doc.images.filter(x => x.title.match(/jpg$|png$/));
-
+         if(imgs.length === 0) {
+          commit('noImages')
+         }
           imgs.forEach(x =>
             convertImages(x.title.replace(/File:/g, ""), imgs.length)
           );
         }
+       
+        
         if (doc.extlinks !== undefined) {
           doc.extlinks.forEach(x => links.push(Object.values(x).join("")));
         }
@@ -172,11 +189,13 @@ export default new Vuex.Store({
           }
         }).then(response => {
           url = [];
+          
           let page = response.data.query.pages;
           let id = Object.keys(page);
           let doc = page[id];
           let imgId = Object.keys(doc.imageinfo);
           let url = doc.imageinfo[imgId].url;
+          
 
           urls.push(url);
 
@@ -184,6 +203,7 @@ export default new Vuex.Store({
             
 
             commit("getImages", urls);
+           
           }
         }).catch = error => console.log(error);
       }
