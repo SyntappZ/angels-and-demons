@@ -106,9 +106,7 @@ export default {
       });
     });
 
-    if (window.innerWidth > 1500) {
-      this.angelImages.pop();
-    }
+   
 
     let religions = this.angels.map(x => x.religion);
     let splitArr = religions
