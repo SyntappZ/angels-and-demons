@@ -12,7 +12,7 @@
         </v-flex>
         <v-flex class="img-title-wrap" v-for="image in images" :key="image.title" xs12 sm12 md4 lg4>
           <div class="img-wrap">
-            <img :src="image.url" alt />
+            <img :src="image.url" :alt="image.title" :title="image.title"/>
           </div>
           <h3 class="img-title">{{ image.title }}</h3>
         </v-flex>

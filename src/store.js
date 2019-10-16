@@ -1,8 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
-import { linkSync } from "fs";
-import { async } from "q";
+
 Vue.use(Vuex, axios);
 
 export default new Vuex.Store({
@@ -12,13 +11,10 @@ export default new Vuex.Store({
     images: [],
     title: "",
     loaded: false,
-    isImages: '',
+    isImages: "",
     allLoaded: []
   },
   mutations: {
-   
-
-    
     getSections(state, sections) {
       let arr = [];
 
@@ -88,23 +84,22 @@ export default new Vuex.Store({
     },
     getLinks(state, links) {
       state.links = links;
-      state.allLoaded.push(true)
+      state.allLoaded.push(true);
     },
     getImages(state, images) {
       state.images = images;
-      state.allLoaded.push(true)
+      state.allLoaded.push(true);
     },
     getName(state, name) {
       state.title = name;
-      state.allLoaded.push(true)
+      state.allLoaded.push(true);
     },
     noImages(state) {
-      state.allLoaded.push('none')
+      state.allLoaded.push("none");
     }
   },
   actions: {
     loadInfo({ commit }, name) {
-      
       axios({
         method: "get",
         url: "https://en.wikipedia.org/w/api.php",
@@ -120,18 +115,17 @@ export default new Vuex.Store({
         let id = Object.keys(page);
         let doc = page[id];
         let links = [];
-       
+
         if (doc.images !== undefined) {
           let imgs = doc.images.filter(x => x.title.match(/jpg$|png$/));
-         if(imgs.length === 0) {
-          commit('noImages')
-         }
+          if (imgs.length === 0) {
+            commit("noImages");
+          }
           imgs.forEach(x =>
             convertImages(x.title.replace(/File:/g, ""), imgs.length)
           );
         }
-       
-        
+
         if (doc.extlinks !== undefined) {
           doc.extlinks.forEach(x => links.push(Object.values(x).join("")));
         }
@@ -189,21 +183,25 @@ export default new Vuex.Store({
           }
         }).then(response => {
           url = [];
-          
+
           let page = response.data.query.pages;
           let id = Object.keys(page);
           let doc = page[id];
           let imgId = Object.keys(doc.imageinfo);
           let url = doc.imageinfo[imgId].url;
-          
-
-          urls.push(url);
+          let title = url
+            .match(/\/\w+\.jpg|\/\w+\.png/)[0]
+            .replace(/\//, "")
+            .replace(/\.\w+/, "");
+          let obj = {
+            url: url,
+            title: title
+          };
+          console.log(url)
+          urls.push(obj);
 
           if (urls.length == len) {
-            
-
             commit("getImages", urls);
-           
           }
         }).catch = error => console.log(error);
       }

@@ -3,7 +3,7 @@
     <v-layout wrap>
       <v-flex xs12 md12 lg12>
         <div class="img-wrap">
-          <img src="logo.png" />
+          <img src="logo.png" alt="angel wings logo"/>
         </div>
         <div>
           <h2 class="cookie">Angels & Demons</h2>

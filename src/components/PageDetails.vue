@@ -15,7 +15,7 @@
         </v-flex>
         <v-flex xs12 md6 lg6>
           <div class="main-img" v-for="(image, i) in images" :key="i">
-            <img :src="image.img" alt="no image" />
+            <img :src="image.img" alt="demons and angels" />
           </div>
         </v-flex>
         <v-flex xs12></v-flex>
@@ -29,6 +29,7 @@ export default {
   props: ["list", "title", "images", "religion"],
 
   created() {
+    
     this.labels = this.religion.map(x => x.religion);
     this.value = this.religion.map(x => x.amount);
   },

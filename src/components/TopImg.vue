@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <img class="bg-img" :src="bgImg" alt />
+    <img class="bg-img" :src="bgImg" alt="black eyed demon" />
     <div class="welcome-wrap">
       <div class="welcome">
         <h4 class="skewed">{{ theSkew }}</h4>

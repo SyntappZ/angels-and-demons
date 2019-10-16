@@ -21,8 +21,8 @@
       
 
         <v-flex xs12 md3 lg3>
-          <div class="img-wrap" v-for="img in images" :key="img">
-            <img class="img" :src="img" alt="jeff" />
+          <div class="img-wrap" v-for="img in images" :key="img.title">
+            <img class="img" :src="img.url" :alt="img.title" :title="img.title"/>
           </div>
         </v-flex>
        
