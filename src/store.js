@@ -197,7 +197,7 @@ export default new Vuex.Store({
             url: url,
             title: title
           };
-          console.log(url)
+          
           urls.push(obj);
 
           if (urls.length == len) {
