@@ -9,7 +9,7 @@
       <h5>
       Information on many types of demons, <br> or angels if thats what you like.
       </h5>
-      <a href="https://en.wikipedia.org/wiki/Demonology" target="_blank">
+      <a href="https://en.wikipedia.org/wiki/Demonology" target="_blank" rel="noopener">
         <button class="btn">
           more info
           <i class="fas fa-arrow-right"></i>

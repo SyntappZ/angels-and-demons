@@ -30,7 +30,7 @@
         <v-flex v-if="links.length > 0" xs12>
           <h2 class="link-title">External Links</h2>
           <div v-for="(link, j) in links" :key="j">
-            <a class="link" :href="link.url" target="_blank">{{ link.name }}</a>
+            <a class="link" :href="link.url" target="_blank" rel="noopener">{{ link.name }}</a>
           </div>
         </v-flex>
       </v-layout>

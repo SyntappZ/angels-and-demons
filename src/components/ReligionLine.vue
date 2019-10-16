@@ -30,7 +30,7 @@
           </v-flex>
 
           <v-flex v-for="link in mythology" :key="link.title" xs12 sm6 md4 lg2>
-            <a :href="link.url" target="_blank">{{ link.title }}</a>
+            <a :href="link.url" target="_blank" rel="noopener">{{ link.title }}</a>
           </v-flex>
         </v-layout>
       </v-container>
