@@ -12,7 +12,8 @@ export default new Vuex.Store({
     title: "",
     loaded: false,
     isImages: "",
-    allLoaded: []
+    allLoaded: [],
+    
   },
   mutations: {
     getSections(state, sections) {
@@ -100,6 +101,8 @@ export default new Vuex.Store({
   },
   actions: {
     loadInfo({ commit }, name) {
+     
+      
       axios({
         method: "get",
         url: "https://en.wikipedia.org/w/api.php",
@@ -111,6 +114,7 @@ export default new Vuex.Store({
           origin: "*"
         }
       }).then(response => {
+        
         let page = response.data.query.pages;
         let id = Object.keys(page);
         let doc = page[id];
@@ -189,13 +193,11 @@ export default new Vuex.Store({
           let doc = page[id];
           let imgId = Object.keys(doc.imageinfo);
           let url = doc.imageinfo[imgId].url;
-          let title = url
-            .match(/\/\w+\.jpg|\/\w+\.png/)[0]
-            .replace(/\//, "")
-            .replace(/\.\w+/, "");
+          
+
           let obj = {
             url: url,
-            title: title
+            title: 'angels & demons'
           };
           
           urls.push(obj);

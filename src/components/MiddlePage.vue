@@ -10,9 +10,9 @@
             <h4>demons & angels</h4>
           </div>
         </v-flex>
-        <v-flex class="img-title-wrap" v-for="image in images" :key="image.title" xs12 sm12 md4 lg4>
+        <v-flex class="img-title-wrap" v-for="(image, i) in images" :key="i" xs12 sm12 md4 lg4>
           <div class="img-wrap">
-            <img :src="image.url" :alt="image.title" :title="image.title"/>
+            <img :src="image.url" :alt="image.title" />
           </div>
           <h3 class="img-title">{{ image.title }}</h3>
         </v-flex>
